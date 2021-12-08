@@ -1,0 +1,11 @@
+mixin button-with-arrow({tag, typeOrHref, text, className})
+  if tag === 'a'
+    a(class= (className ? className + ' button-with-arrow' : 'button-with-arrow'), href= typeOrHref)
+      span.button-with-arrow__text= text
+      span.button-with-arrow__icon 
+        +icon('long-arrow-right')(width="30", height="16")
+  else
+    button(class= (className ? className + ' button-with-arrow' : 'button-with-arrow'), type= typeOrHref)
+      span.button-with-arrow__text= text
+      span.button-with-arrow__icon 
+        +icon('long-arrow-right')(width="30", height="16")

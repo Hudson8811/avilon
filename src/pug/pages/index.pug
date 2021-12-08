@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Главная'
+		};
+
+block main
+	include ../modules/hero
+	include ../modules/vacancies
+	include ../modules/awards
+	include ../modules/advantages
+	include ../modules/brands

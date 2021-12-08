@@ -1,0 +1,110 @@
+.business-preview {
+  $self: &;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  height: 410px;
+  padding: 0 24px 42px;
+
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include hover {
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+
+    transition: opacity 0.5s ease;
+  }
+
+  &--moeleto {
+    background-image: url("../images/businesses/moeleto.jpeg");
+  }
+
+  &--jilinvest {
+    background-image: url("../images/businesses/jilinvest.jpeg");
+  }
+
+  &--avilonplaza {
+    background-image: url("../images/businesses/avilonplaza.jpeg");
+  }
+
+  &--autologistics {
+    background-image: url("../images/businesses/autologistics.jpeg");
+  }
+
+  &--solt {
+    background-image: url("../images/businesses/solt.jpeg");
+  }
+
+  &--assuntamadre {
+    background-image: url("../images/businesses/assuntamadre.jpeg");
+  }
+
+  &--bg-grey {
+    &::before {
+      background-color: $grey-c9;
+    }
+
+    #{$self}__type,
+    #{$self}__site {
+      color: $white;
+    }
+  }
+
+  &--bg-light {
+    &::before {
+      background-color: $light-f1;
+    }
+  }
+
+  & > * {
+    align-self: center;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+
+    img {
+      align-self: flex-end;
+    }
+  }
+
+  &__type {
+    position: relative;
+    z-index: 1;
+    margin-top: 76px;
+    font-size: 20px;
+    line-height: 1.35;
+    color: $grey-c4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &__site {
+    position: relative;
+    z-index: 1;
+    margin-top: 11px;
+    font-size: 16px;
+    line-height: 1.35;
+    color: $grey-c4;
+  }
+}

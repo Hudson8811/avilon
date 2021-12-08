@@ -1,0 +1,26 @@
+.cform {
+  form {
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: -42px;
+    margin-top: -56px;
+  }
+
+  &__field {
+    width: 100%;
+    margin-left: 42px;
+    margin-top: 56px;
+
+    &--half {
+      width: calc(50% - 42px);
+    }
+  }
+
+  &__consent {
+    max-width: 500px;
+  }
+}

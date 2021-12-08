@@ -1,0 +1,27 @@
+html {
+  font-size: $fs-main;
+  line-height: $lh-main;
+}
+body {
+  font-family: $mainFont;
+  font-weight: $fw-main;
+  color: $textMainColor;
+}
+
+.container {
+  width: 100%;
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

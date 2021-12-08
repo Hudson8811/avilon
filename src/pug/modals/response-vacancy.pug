@@ -1,0 +1,26 @@
+section.response-vacancy(style="display: block;")
+  header.response-vacancy__header
+    h2.response-vacancy__title
+      | Отклик на вакансию:
+      span.response-vacancy__vacancy-name старший менеджер отдела продаж VOLVO
+    
+    .response-vacancy__form.cform
+      form(action="", method="")
+        .cform__grid
+          +field({type: 'text', name: 'firstname', hint: 'Имя', className: 'cform__field cform__field--half'})
+          +field({type: 'text', name: 'lastname', hint: 'Фамилия', className: 'cform__field cform__field--half'})
+          +field({type: 'text', name: 'patronymic', hint: 'Отчество', className: 'cform__field cform__field--half'})
+          +field({type: 'text', name: 'dateOfBirth', hint: 'Дата рождения', className: 'cform__field cform__field--half'})
+          +field({type: 'email', name: 'email', hint: 'Email', className: 'cform__field cform__field--half'})
+          +field({type: 'tel', name: 'phone', hint: 'Номер телефона', className: 'cform__field cform__field--half'})
+
+          // file upload
+          label.cform__file.file-upload
+            input.visually-hidden(type="file", name="cvFile")
+            span.file-upload__text Прикрепить резюме
+
+          +field({type: 'textarea', name: 'message', hint: 'Расскажите, почему хотите работать у нас', className: 'cform__field'})
+
+          +custom-checkbox({name: 'consent', text: 'Даю cогласие на обработку персональных данных, а так же, на включение моей анкеты в базу кандидатов', className: 'cform__consent'})
+
+        +button-with-arrow({tag: 'button', typeOrHref: 'submit', text: 'Отправить заявку', className: 'cform__send button-with-arrow--outline-white'})

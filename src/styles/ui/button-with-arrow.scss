@@ -1,0 +1,48 @@
+.button-with-arrow {
+  $self: &;
+  display: inline-flex;
+  padding: 26px 57px;
+
+  border: none;
+  background-color: $blue-37;
+  appearance: none;
+  cursor: pointer;
+
+  transition: background-color $transition;
+
+  @include hover {
+    background-color: $blue-37-hover;
+
+    #{$self}__icon {
+      transform: translateX(30%);
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1;
+    color: $white;
+    letter-spacing: 0.1em;
+    align-self: center;
+  }
+
+  &__icon {
+    width: 28px;
+    margin-left: 16px;
+    margin-top: 4px;
+    align-self: center;
+
+    transition: transform $transition;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      fill: $white;
+    }
+  }
+}

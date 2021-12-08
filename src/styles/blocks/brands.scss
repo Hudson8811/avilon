@@ -1,0 +1,73 @@
+.brands {
+  padding: 60px 0;
+
+  &__header {
+    margin: 0 0 80px;
+    padding-left: 135px;
+  }
+
+  &__wrapper {
+    background-color: $asphalt-c9;
+
+    .container {
+      position: relative;
+      display: flex;
+
+      &::before {
+        content: "";
+        display: block;
+
+        width: 485px;
+        margin-left: -75px;
+        flex-shrink: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../images/brands-bg.jpg");
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -32px !important;
+    padding: 116px 0 !important;
+  }
+
+  &__item {
+    display: flex;
+    width: 100%;
+    max-width: calc(100% / 7);
+    min-width: 90px;
+    height: 100px;
+    margin-top: 32px;
+    justify-content: center;
+
+    a {
+      align-self: center;
+
+      @include hover {
+        img {
+          opacity: 1;
+          filter: grayscale(0);
+        }
+      }
+
+      img {
+        opacity: 0.6;
+        filter: grayscale(1);
+
+        transition: opacity $transition, filter $transition;
+      }
+    }
+  }
+
+  &__businesses {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      width: 25%;
+    }
+  }
+}

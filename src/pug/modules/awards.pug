@@ -1,0 +1,32 @@
+section.awards
+  .awards__container.container
+    h2.awards__title.title Награды и достижения
+
+    .awards__years.swiper.__js_years-carousel
+      .swiper-wrapper
+        each item, index in YEARS
+          .awards__year.swiper-slide(data-target="#" +  item.targetSelector)
+            span= item.year
+      .awards__years-navigation
+        button.arrow-btn.arrow-btn--prev(type="button")
+          +icon('arrow-left')(width="18", height="32")
+          span.visually-hidden Предыдущий
+        button.arrow-btn.arrow-btn--next(type="button")
+          +icon('arrow-right')(width="18", height="32")
+          span.visually-hidden Следующий
+    
+    .awards__wrapper.inactive
+      each item, index in YEARS
+        .awards__carousel
+          .swiper.__js_awards-carousel(id= item.targetSelector)
+            .swiper-wrapper 
+              each slide in item.awards
+                +award-preview(slide)
+            .awards__carousel-navigation
+              button.arrow-btn.arrow-btn--round.arrow-btn--prev(type="button")
+                +icon('arrow-left')(width="18", height="32")
+                span.visually-hidden Предыдущий
+              button.arrow-btn.arrow-btn--round.arrow-btn--next(type="button")
+                +icon('arrow-right')(width="18", height="32")
+                span.visually-hidden Следующий
+          .awards__carousel-progress

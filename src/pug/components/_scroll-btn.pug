@@ -1,0 +1,6 @@
+mixin scroll-btn(direction, className)
+  - const DirectionMap = {down: 'Вниз', up: 'Вверх'};
+  
+  button(class= (className ? className + ' scroll-btn scroll-btn--' + direction : 'scroll-btn scroll-btn--' + direction), type="button") 
+    span.visually-hidden= (DirectionMap[direction] ? DirectionMap[direction] : '')
+    +icon('double-arrow')(width="32", height="29")

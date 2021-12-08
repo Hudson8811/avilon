@@ -1,0 +1,39 @@
+.scroll-btn {
+  $self: &;
+
+  display: block;
+  width: 32px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  appearance: none;
+  cursor: pointer;
+
+  &--down {
+  }
+
+  &--up {
+    svg {
+      transform: scale(1, -1);
+    }
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: $grey-95;
+    transition: fill $transition;
+  }
+
+  @include hover {
+    svg {
+      fill: $grey-c9;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

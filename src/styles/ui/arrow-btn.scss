@@ -1,0 +1,61 @@
+.arrow-btn {
+  $self: &;
+
+  display: flex;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+
+  @include hover {
+    svg {
+      fill: $grey-7d;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  svg {
+    display: block;
+    width: auto;
+    height: 100%;
+    fill: $grey-95;
+    transition: fill $transition;
+  }
+
+  &--round {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $dark-37;
+
+    transition: background-color $transition;
+
+    svg {
+      height: 15px;
+      fill: $white;
+      align-self: center;
+    }
+
+    @include hover {
+      background-color: lighten($dark-37, 10%);
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &--next {
+    svg {
+      margin-right: -4px;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+mixin custom-checkbox({name, text, className})
+  label(class= (className ? className + ' custom-checkbox' : 'custom-checkbox'))
+    input.visually-hidden(type="checkbox", name= name, value= text)
+    span.custom-checkbox__text= text

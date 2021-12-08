@@ -1,0 +1,22 @@
+section.brands
+  header.brands__header 
+    .container 
+      h2.brands__title.title Бренды
+
+  .brands__wrapper
+    .container
+      ul.brands__list
+        - let i = 1;
+        while i <= 30
+          li.brands__item
+            a(href="#")
+              img(src="images/brands/logo/brands-logo-" + i + ".png")
+          - i++;
+  .brands__businesses
+    
+    each item in BUSINESSES
+      a.brands__businesses-item.business-preview(class= item.mod, href= item.site.url)
+        span.business-preview__logo
+          img(src="images/businesses/" + item.logo.n, width= item.logo.w, height= item.logo.h, alt="")
+        span.business-preview__type= item.type
+        span.business-preview__site= item.site.text

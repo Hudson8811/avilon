@@ -1,0 +1,28 @@
+section.advantages
+  header.advantages__header
+    .container
+      h2.advantages__title.title Преимущества
+  .advantages__main
+    .container
+      .advantages__wrapper
+        ul.advantages__list
+          each item in ADVANTAGES_LIST
+            li.advantages__item.advantage
+              .advantage__icon
+                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+              .advantage__text!= item.text
+      
+      .advantages__video.video
+        .video__inner
+          .video__placeholder
+            button.video__play(type="button")
+              +icon('play')(width="120", height="120")
+          video(preload)
+            source(src="video/_vars-video-main__video.mp4" type="video/mp4")
+  .advantages__bottom
+    .container
+      
+      .advantages__text
+        p Работа в ГК «АВИЛОН» – это работа в современных помещениях, оснащенных новейшим оборудованием.
+
+        p Мы гарантируем карьерный рост: большой процент сотрудников добились высоких успехов в компании и сейчас занимают руководящие должности.

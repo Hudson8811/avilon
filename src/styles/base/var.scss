@@ -1,0 +1,52 @@
+/* media */
+$media-list: (
+  "xxs": 375,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "xxl": 1900,
+);
+
+/**/
+$transition: 0.3s ease;
+
+/* шрифты */
+$mainFont: "Raleway", "Arial", sans-serif;
+$secondFont: "Cormorant", "Georgia", serif;
+$thirdFont: "Cormorant Garamond", "Georgia", serif;
+$fourthFont: "Cormorant Infant", "Georgia", serif;
+
+$fs-main: 16px;
+$lh-main: 1.6;
+$fw-main: 500;
+
+/* цвета */
+$white: #ffffff;
+$black: #000000;
+
+$dark-37: #373f42;
+$dark-2b: #2b303a;
+$dark-23: #232a32;
+
+$asphalt-92: #92a8b5;
+$asphalt-c9: #c9d2d7;
+$light-e1: #e1e6e9;
+$light-f1: #f1f5f8;
+
+$grey-7d: #7d7f7e;
+$grey-75: #757c84;
+$grey-82: #82949d;
+$grey-95: #959b9d;
+$grey-a9: #a9acab;
+$grey-c4: #c4cfd4;
+$grey-c9: #c9d2d7;
+$grey-e5: #e5e5ec;
+
+$blue-37: #3772ff;
+$blue-37-hover: lighten(#3772ff, 5%);
+
+$darkred-a7: #a71d31;
+
+$textMainColor: $dark-37;

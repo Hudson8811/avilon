@@ -1,0 +1,10 @@
+mixin vacancy-preview({title, text, tag, className, category})
+  #{tag ? tag : 'div'}(class= (className ? className + ' vacancy-preview' : 'vacancy-preview'), data-category= category)
+    .vacancy-preview__title= title
+    .vacancy-preview__text= text
+    time.vacancy-preview__date(datetime="2021-11-18") 18 ноября 2021
+
+    .vacancy-preview__action 
+      button.vacancy-preview__more(tupe="button") Подробнее
+    span.vacancy-preview__icon 
+      +icon('arrow-top-right')(width="11", height="11")

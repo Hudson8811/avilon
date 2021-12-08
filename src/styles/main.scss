@@ -1,0 +1,44 @@
+/* base */
+@import "base/var";
+@import "base/reset";
+@import "base/fonts";
+
+/* mixin */
+@import "base/mixin";
+
+/*libs*/
+@import "libs/simplebar";
+@import "libs/swiper-bundle.min";
+
+/* main */
+@import "partials/main";
+
+/* ui */
+@import "ui/arrow-btn";
+@import "ui/scroll-btn";
+@import "ui/button-with-arrow";
+@import "ui/field";
+@import "ui/custom-checkbox";
+
+/* blocks */
+@import "blocks/title";
+@import "blocks/vacancy-preview";
+@import "blocks/award-preview";
+@import "blocks/vacancy-detail";
+@import "blocks/advantage";
+@import "blocks/video";
+@import "blocks/business-preview";
+@import "blocks/cform";
+@import "blocks/response-vacancy";
+
+@import "blocks/hero";
+@import "blocks/vacancies";
+@import "blocks/awards";
+@import "blocks/advantages";
+@import "blocks/brands";
+
+/* components */
+@import "partials/header";
+@import "partials/footer";
+
+/*blocks*/

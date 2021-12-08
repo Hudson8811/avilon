@@ -1,0 +1,19 @@
+.advantage {
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+    height: 98px;
+    margin-bottom: 32px;
+    align-self: center;
+
+    svg {
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}

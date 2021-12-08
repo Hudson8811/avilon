@@ -1,0 +1,10 @@
+mixin award-preview({title, text, image, icon, className})
+  div(class= (className ? className + ' award-preview' : 'award-preview'))
+    .award-preview__main
+      .award-preview__title!= title
+      .award-preview__text!= text
+    .award-preview__image
+      img(src="images/awards/" + image + '.jpg', srcset="images/awards/" + image + '@2x.jpg', width="432", height="418", alt="")
+
+      span.award-preview__icon
+        +icon(icon)(width="104", height="104")

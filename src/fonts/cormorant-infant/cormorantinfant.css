@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Light'), local('CormorantInfant-Light'), url('Cormorantinfantlight.woff2') format('woff2'), url('Cormorantinfantlight.woff') format('woff'), url('Cormorantinfantlight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Light Italic'), local('CormorantInfant-LightItalic'), url('Cormorantinfantlightitalic.woff2') format('woff2'), url('Cormorantinfantlightitalic.woff') format('woff'), url('Cormorantinfantlightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant'), local('CormorantInfant-Regular'), url('Cormorantinfant.woff2') format('woff2'), url('Cormorantinfant.woff') format('woff'), url('Cormorantinfant.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Italic'), local('CormorantInfant-Italic'), url('Cormorantinfantitalic.woff2') format('woff2'), url('Cormorantinfantitalic.woff') format('woff'), url('Cormorantinfantitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Book'), local('CormorantInfant-Book'), url('Cormorantinfantbook.woff2') format('woff2'), url('Cormorantinfantbook.woff') format('woff'), url('Cormorantinfantbook.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Book Italic'), local('CormorantInfant-BookItalic'), url('Cormorantinfantbookitalic.woff2') format('woff2'), url('Cormorantinfantbookitalic.woff') format('woff'), url('Cormorantinfantbookitalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Semibold'), local('CormorantInfant-Semibold'), url('Cormorantinfantsemibold.woff2') format('woff2'), url('Cormorantinfantsemibold.woff') format('woff'), url('Cormorantinfantsemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Semibold Italic'), local('CormorantInfant-SemiboldItalic'), url('Cormorantinfantsemibolditalic.woff2') format('woff2'), url('Cormorantinfantsemibolditalic.woff') format('woff'), url('Cormorantinfantsemibolditalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Bold'), local('CormorantInfant-Bold'), url('Cormorantinfantbold.woff2') format('woff2'), url('Cormorantinfantbold.woff') format('woff'), url('Cormorantinfantbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: local('Cormorant Infant Bold Italic'), local('CormorantInfant-BoldItalic'), url('Cormorantinfantbolditalic.woff2') format('woff2'), url('Cormorantinfantbolditalic.woff') format('woff'), url('Cormorantinfantbolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}

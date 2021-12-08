@@ -1,0 +1,64 @@
+.custom-checkbox {
+  display: block;
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 54px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $grey-75;
+    cursor: pointer;
+
+    /*@include media(xxl) {
+      padding-left: vw(43);
+      font-size: vw(20);
+    }
+
+    @include media(full) {
+      padding-left: 43px;
+      font-size: 20px;
+    }*/
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 30px;
+      height: 30px;
+      border: solid 1px $grey-75;
+      border-radius: 0;
+      transition: border-color 0.3s ease;
+      //background-color: #fff;
+
+      /*@include media(xxl) {
+        width: vw(25);
+        height: vw(25);
+      }
+
+      @include media(full) {
+        width: 25px;
+        height: 25px;
+      }*/
+    }
+  }
+
+  /*@include media(lg) {
+    
+  }*/
+  input:focus ~ &__text,
+  &__text:hover {
+    &::before {
+      border-color: $white;
+    }
+  }
+
+  input:checked ~ &__text {
+    &::before {
+      box-shadow: inset 0 0 0 7px $dark-37;
+      background-color: $white;
+    }
+  }
+}

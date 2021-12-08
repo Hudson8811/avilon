@@ -1,0 +1,58 @@
+//Cormorant	700
+@font-face {
+  font-family: "Cormorant";
+  src: local("Cormorant Book"), local("Cormorant-Book"),
+    url("../fonts/cormorant/Cormorantbook.woff2") format("woff2"),
+    url("../fonts/cormorant/Cormorantbook.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant";
+  src: local("Cormorant Bold"), local("Cormorant-Bold"),
+    url("../fonts/cormorant/Cormorantbold.woff2") format("woff2"),
+    url("../fonts/cormorant/Cormorantbold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+//Cormorant Garamond 500
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Book"), local("CormorantGaramond-Book"),
+    url("../fonts/cormorant-garamond/Cormorantgaramondbook.woff2")
+      format("woff2"),
+    url("../fonts/cormorant-garamond/Cormorantgaramondbook.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+//Cormorant Infant 500
+@font-face {
+  font-family: "Cormorant Infant";
+  src: local("Cormorant Infant Book"), local("CormorantInfant-Book"),
+    url("../fonts/cormorant-infant/Cormorantinfantbook.woff2") format("woff2"),
+    url("../fonts/cormorant-infant/Cormorantinfantbook.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+//Raleway	500	600
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway Medium"), local("Raleway-Medium"),
+    url("../fonts/raleway/ralewaymedium.woff2") format("woff2"),
+    url("../fonts/raleway/ralewaymedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"),
+    url("../fonts/raleway/ralewaysemibold.woff2") format("woff2"),
+    url("../fonts/raleway/ralewaysemibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}

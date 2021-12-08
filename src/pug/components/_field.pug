@@ -1,0 +1,9 @@
+mixin field({type, name, hint, className})
+  if type === 'textarea'
+    label(class= (className ? className + ' field field--textarea' : 'field field--textarea'))
+      textarea(name= name, placeholder= hint)
+      //-span.field__hint= hint
+  else
+    label(class= (className ? className + ' field' : 'field'))
+      input(type= type, name= name, placeholder= hint)
+      //-span.field__hint= hint

@@ -1,0 +1,58 @@
+.hero {
+  overflow: hidden;
+  background-color: $white;
+  background-image: linear-gradient(
+    to right,
+    $light-e1 75.21%,
+    transparent 75.21%
+  );
+
+  &__container {
+    display: flex;
+  }
+
+  &__title {
+    margin: 0 0 80px;
+    font-size: 70px;
+  }
+
+  &__list {
+    li {
+      font-size: 22px;
+    }
+
+    li + li {
+      margin-top: 18px;
+    }
+  }
+
+  &__text {
+    max-width: 870px;
+    padding: 123px 0;
+
+    font-family: $thirdFont;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 1.6;
+  }
+
+  &__image {
+    width: calc(100% + 75px);
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: auto;
+    }
+  }
+
+  &__column {
+    &--main {
+      width: 410px;
+      padding-top: 134px;
+      padding-right: 45px;
+      flex-shrink: 0;
+    }
+  }
+}
