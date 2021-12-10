@@ -113,7 +113,7 @@ window.addEventListener('load', () => {
   });
 
   //////////// Фильтрация
-  const filterVacancies = (target) => {
+  /*const filterVacancies = (target) => {
     vacanciesMain.classList.add('animate');
     vacanciesMain.classList.add('hidden');
 
@@ -137,9 +137,9 @@ window.addEventListener('load', () => {
         checkMainScrollNeed();
       };
     }
-  };
+  };*/
 
-  vacanciesMenu.onclick = (e) => {
+  /*vacanciesMenu.onclick = (e) => {
     const target = e.target.closest('.vacancies__menu-item:not(.vacancies__menu-item--current)');
 
     if (target) {
@@ -154,6 +154,6 @@ window.addEventListener('load', () => {
       target.classList.add('vacancies__menu-item--current');
       filterVacancies(target.firstElementChild.dataset.target);
     }
-  }
+  }*/
 
 });

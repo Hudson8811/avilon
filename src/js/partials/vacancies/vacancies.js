@@ -1,7 +1,7 @@
 //= scroll-main.js
 //= scroll-aside.js
 
- window.addEventListener('load', () => {
+ /*window.addEventListener('load', () => {
   const vacanciesMain = document.querySelector('.vacancies__main');
   const vacancyDetail = document.querySelector('.vacancy-detail');
 
@@ -36,4 +36,4 @@
 
 
   }
-});
+});*/
