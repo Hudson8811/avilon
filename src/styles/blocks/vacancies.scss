@@ -8,6 +8,10 @@
       position: relative;
       display: flex;
 
+      @include max(md) {
+        display: block;
+      }
+
       &::after {
         content: "";
         position: relative;
@@ -20,6 +24,10 @@
         background-position: 50% 0;
         background-size: cover;
         background-image: url("../images/vacancies-header-bg.jpg");
+
+        @include max(md) {
+          display: none;
+        }
       }
     }
 
@@ -29,6 +37,10 @@
       margin-right: 40px;
       padding: 40px 0;
       align-self: center;
+
+      @include max(md) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -44,8 +56,16 @@
     height: 820px;
     background-color: $asphalt-c9;
 
+    @include max(md) {
+      height: auto;
+    }
+
     .container {
       display: flex;
+
+      @include max(md) {
+        display: block;
+      }
     }
   }
 
@@ -58,6 +78,13 @@
     width: 410px;
     padding-right: 40px;
     background-color: $dark-23;
+
+    @include max(md) {
+      z-index: 1;
+      display: block;
+      width: 100%;
+      padding: 60px 0;
+    }
 
     &::before {
       content: "";
@@ -72,6 +99,21 @@
       transform: translateX(-99%);
     }
 
+    &::after {
+      @include max(md) {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        height: 100%;
+        background-color: $dark-23;
+
+        transform: translateX(99%);
+      }
+    }
+
     &-scroll-wrapper {
       position: relative;
       width: 50vw;
@@ -79,6 +121,13 @@
       max-height: 564px;
       padding: 13px 0;
       align-self: flex-end;
+      //overflow: hidden;
+      //overflow-x: hidden;
+      //overflow-y: hidden;
+
+      @include max(md) {
+        display: none;
+      }
 
       &::before,
       &::after {
@@ -86,7 +135,7 @@
         position: absolute;
         z-index: 1;
         right: -20px;
-        width: 50vw;
+        width: calc(50vw - 20px);
         height: 84px;
         pointer-events: none;
       }
@@ -116,12 +165,22 @@
     &-scroll-btn {
       margin: 0 auto;
 
+      @include max(md) {
+        display: none;
+      }
+
       &--down {
         margin-top: 64px;
       }
 
       &--up {
         margin-bottom: 64px;
+      }
+    }
+
+    &-select {
+      @include min(md) {
+        display: none;
       }
     }
   }
@@ -190,12 +249,25 @@
     width: calc(100% - 410px);
     padding: 42px 0 42px 42px;
 
+    @include max(md) {
+      width: 100%;
+      padding: 60px 0;
+    }
+
     &-scroll-wrapper {
       max-height: 564px;
+
+      @include max(md) {
+        max-height: none;
+      }
     }
 
     &-scroll-btn {
       margin: 0 auto;
+
+      @include max(md) {
+        display: none;
+      }
 
       &--down {
         margin-top: 48px;
@@ -221,12 +293,36 @@
     flex-wrap: wrap;
     margin-top: -42px !important;
     margin-left: -42px !important;
+
+    @include max(1440) {
+      margin-left: -24px !important;
+      margin-top: -24px !important;
+    }
+    @include max(xs) {
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+    }
   }
 
   &__item {
     width: calc(33.33% - 42px);
     margin-left: 42px;
     margin-top: 42px;
+
+    @include max(1440) {
+      width: calc(50% - 24px);
+      margin-left: 24px;
+      margin-top: 24px;
+    }
+    @include max(xs) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+
+      & + & {
+        margin-top: 24px;
+      }
+    }
   }
 
   &__detail {

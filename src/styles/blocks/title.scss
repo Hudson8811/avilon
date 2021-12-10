@@ -5,4 +5,8 @@
   line-height: 1;
   font-weight: 500;
   color: $asphalt-92;
+
+  @include max(md) {
+    font-size: 56px;
+  }
 }

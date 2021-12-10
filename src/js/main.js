@@ -2,6 +2,7 @@
 
 
 //= ./libs/simplebar.js
+//= ./libs/choices.min.js
 //= ./libs/swiper-bundle.min.js
 //= ./partials/main.js
 //= ./partials/awards/awards.js
@@ -9,7 +10,3 @@
 
 
 
-
-const one = document.querySelector('.one');
-const four = document.querySelector('.four');
-const it = document.querySelectorAll('.it');

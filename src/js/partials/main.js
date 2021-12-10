@@ -6,4 +6,6 @@ window.addEventListener('load', function() {
       new SimpleBar(element);
     });
   }*/
+  
 });
+

@@ -47,16 +47,24 @@
   const VACANCIES_LIST = VACANCIES_AUTO_BUSINESS.concat(VACANCIES_IT, VACANCIES_AGRO, VACANCIES_ADMIN, VACANCIES_WORKER, VACANCIES_FINANCE, VACANCIES_PR, VACANCIES_INVEST);
 
   const VACANCIES_MENU = [
-    {text: 'Автомобильный бизнес', counter: '21', target: 'auto-business'},
-    {text: 'Информационные технологии, интернет, телеком', counter: '12', target: 'it'},
-    {text: 'Производство, сельское хозяйство', counter: '33', target: 'agro'},
-    {text: 'Административный персонал', counter: '6', target: 'admin'},
-    {text: 'Рабочий персонал', counter: '4', target: 'worker'},
-    {text: 'Бухгалтерия, управленческий учет, финансы предприятия', counter: '22', target: 'finance'},
-    {text: 'Маркетинг, реклама, PR', counter: '1', target: 'pr'},
-    {text: 'Банки, инвестиции, лизинг', counter: '8', target: 'invest'},
-    {text: 'Управление персоналом, тренинги', counter: '', target: 'control'}
+    {text: 'Автомобильный бизнес', counter: '21', target: 'auto-business', items: VACANCIES_AUTO_BUSINESS},
+    {text: 'Информационные технологии, интернет, телеком', counter: '12', target: 'it', items: VACANCIES_IT},
+    {text: 'Производство, сельское хозяйство', counter: '33', target: 'agro', items: VACANCIES_AGRO},
+    {text: 'Административный персонал', counter: '6', target: 'admin', items: VACANCIES_ADMIN},
+    {text: 'Рабочий персонал', counter: '4', target: 'worker', items: VACANCIES_WORKER},
+    {text: 'Бухгалтерия, управленческий учет, финансы предприятия', counter: '22', target: 'finance', items: VACANCIES_FINANCE},
+    {text: 'Маркетинг, реклама, PR', counter: '1', target: 'pr', items: VACANCIES_PR},
+    {text: 'Банки, инвестиции, лизинг', counter: '8', target: 'invest', items: VACANCIES_INVEST},
+    {text: 'Управление персоналом, тренинги', counter: '', target: 'control', items: []}
   ];
+
+  const data = VACANCIES_MENU.map(it => {
+    return {
+      category: it.target,
+      items: it.items
+    }
+  });
+  //console.log(data)
 
   const AWARDS_2021 = [
     {
