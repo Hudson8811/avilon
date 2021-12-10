@@ -2,8 +2,8 @@
   $self: &;
 
   position: relative;
-  min-height: 160px;
-  padding: 36px 40px 36px 32px;
+  height: 160px;
+  padding: 36px 40px 24px 32px;
   background-color: $white;
 
   &:hover {

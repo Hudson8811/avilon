@@ -6,3 +6,10 @@
 //= ./partials/main.js
 //= ./partials/awards/awards.js
 //= ./partials/vacancies/vacancies.js
+
+
+
+
+const one = document.querySelector('.one');
+const four = document.querySelector('.four');
+const it = document.querySelectorAll('.it');

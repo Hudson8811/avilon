@@ -5,25 +5,31 @@ section.vacancies
         h2.vacancies__title.title Вакансии
         .vacancies__short Выбирайте из более чем 300 открытых вакансий по 40 различным направлениям. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     
+    //each item in VACANCIES_LIST
+      p= item.category
   .vacancies__wrapper
     .container
       .vacancies__aside
-        +scroll-btn('up', 'vacancies__scroll-btn vacancies__scroll-btn--up')
+        +scroll-btn('up', 'vacancies__aside-scroll-btn vacancies__aside-scroll-btn--up')(data-target=".vacancies__aside-scroll-wrapper")
 
-        .vacancies__aside-scroll-wrapper.__js_simplebar
+        .vacancies__aside-scroll-wrapper.__js_vacancies-aside-simplebar
           ul.vacancies__menu
             each item, index in VACANCIES_MENU
               li.vacancies__menu-item(class= (index === 0 ? ' vacancies__menu-item--current' : ''))
                 a(href="#", data-target= item.target)= item.text + (item.counter ? ` (${item.counter})` : '')
 
-        +scroll-btn('down', 'vacancies__scroll-btn vacancies__scroll-btn--down')
+        +scroll-btn('down', 'vacancies__aside-scroll-btn vacancies__aside-scroll-btn--down')(data-target=".vacancies__aside-scroll-wrapper")
 
 
       .vacancies__main
-        ul.vacancies__list
-          each item in VACANCIES
-            +vacancy-preview(item)
-    
+        +scroll-btn('up', 'vacancies__main-scroll-btn vacancies__main-scroll-btn--up')(data-target=".vacancies__main-scroll-wrapper")
+
+        .vacancies__main-scroll-wrapper.__js_vacancies-main-simplebar
+          ul.vacancies__list
+            each item in VACANCIES_LIST
+              +vacancy-preview(item)
+        
+        +scroll-btn('down', 'vacancies__main-scroll-btn vacancies__main-scroll-btn--down')(data-target=".vacancies__main-scroll-wrapper")
 
         section.vacancies__detail.vacancy-detail
           header.vacancy-detail__header

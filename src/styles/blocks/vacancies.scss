@@ -56,7 +56,7 @@
     flex-direction: column;
     justify-content: center;
     width: 410px;
-    padding-right: 20px;
+    padding-right: 40px;
     background-color: $dark-23;
 
     &::before {
@@ -74,9 +74,11 @@
 
     &-scroll-wrapper {
       position: relative;
+      width: 50vw;
       height: 100%;
-      max-height: 560px;
-      background-color: rgba(#fff, 0.2);
+      max-height: 564px;
+      padding: 13px 0;
+      align-self: flex-end;
 
       &::before,
       &::after {
@@ -86,40 +88,58 @@
         right: -20px;
         width: 50vw;
         height: 84px;
-        background-color: rgba(red, 0.2);
+        pointer-events: none;
       }
 
       &::before {
         top: -20px;
+        background-image: linear-gradient(to bottom, $dark-23, transparent);
       }
 
       &::after {
         bottom: -20px;
+        background-image: linear-gradient(to top, $dark-23, transparent);
+      }
+
+      &.is-scroll-end {
+        &::after {
+          display: none;
+        }
+      }
+      &.is-scroll-start {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &-scroll-btn {
+      margin: 0 auto;
+
+      &--down {
+        margin-top: 64px;
+      }
+
+      &--up {
+        margin-bottom: 64px;
       }
     }
   }
 
   &__menu {
-    padding-right: 44px !important;
+    max-width: 370px; //410px;
+    margin-left: auto !important;
+    //padding-left: 15px !important;
+    //padding-right: 44px !important;
 
     &-item {
       &--current {
         a {
-          position: relative;
           color: $white !important;
           pointer-events: none;
 
           &::before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            top: 50%;
-            right: -16px;
-            transform: translateY(-50%);
-            width: 50vw;
-            height: calc(100% + 28px);
-            background-color: $darkred-a7;
-            pointer-events: none;
+            opacity: 1 !important;
           }
         }
       }
@@ -129,12 +149,30 @@
       }
 
       a {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
         font-size: 18px;
         line-height: 1.35;
         color: $grey-95;
         font-weight: 600;
         text-decoration: none;
         transition: color $transition;
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: 50%;
+          right: -16px;
+          transform: translateY(-50%);
+          width: 50vw;
+          height: calc(100% + 28px);
+          background-color: $darkred-a7;
+          pointer-events: none;
+          transition: opacity $transition;
+          opacity: 0;
+        }
 
         @include hover {
           color: $grey-c9;
@@ -150,31 +188,45 @@
   &__main {
     position: relative;
     width: calc(100% - 410px);
+    padding: 42px 0 42px 42px;
+
+    &-scroll-wrapper {
+      max-height: 564px;
+    }
+
+    &-scroll-btn {
+      margin: 0 auto;
+
+      &--down {
+        margin-top: 48px;
+      }
+
+      &--up {
+        margin-bottom: 48px;
+      }
+    }
+
+    &.animate {
+      transition: opacity 0.5s ease;
+    }
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -42px;
-    margin-left: -42px;
+    margin-top: -42px !important;
+    margin-left: -42px !important;
   }
 
   &__item {
     width: calc(33.33% - 42px);
     margin-left: 42px;
     margin-top: 42px;
-  }
-
-  &__scroll-btn {
-    margin: 0 auto;
-
-    &--down {
-      margin-top: 64px;
-    }
-
-    &--up {
-      margin-bottom: 64px;
-    }
   }
 
   &__detail {
@@ -187,7 +239,7 @@
     width: calc(100% + 33px);
     height: calc(100% - 84px);
 
-    transition: transform $transition, opacity $transition;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 
     &.opened {
       transform: translateX(0);

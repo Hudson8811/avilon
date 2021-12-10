@@ -1,9 +1,38 @@
 -
-  const VACANCIES = [
-    {title: 'Старший менеджер отдела продаж VOLVO', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'auto-business'},
+  const getRandomInteger = (a = 0, b = 1) => {
+    const lower = Math.ceil(Math.min(a, b));
+    const upper = Math.floor(Math.max(a, b));
+
+    return Math.floor(lower + Math.random() * (upper - lower + 1));
+  };
+
+  const VACANCY_IT_ITEM = {title: 'Начальник IT отдела', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item it', category: 'it'};
+
+  const VACANCY_AGRO_ITEM = {title: 'Водитель на сельскохозяйственную технику', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'agro'};
+
+  const VACANCY_ADMIN_ITEM = {title: 'Сотрудник отдела кадров', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'admin'};
+
+  const VACANCY_WORKER_ITEM = {title: 'Уборщица помещений', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'worker'};
+
+  const VACANCY_FINANCE_ITEM = {title: 'Бухгалтер', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'finance'};
+
+  const VACANCY_PR_ITEM = {title: 'PR менеджер', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'pr'};
+
+  const VACANCY_INVEST_ITEM = {title: 'Специалист по ценным бумагам и инвестициям', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'invest'};
+
+  const VACANCIES_IT = [...Array(12)].map(it => VACANCY_IT_ITEM);
+  const VACANCIES_AGRO = [...Array(33)].map(it => VACANCY_AGRO_ITEM);
+  const VACANCIES_ADMIN = [...Array(6)].map(it => VACANCY_ADMIN_ITEM);
+  const VACANCIES_WORKER = [...Array(4)].map(it => VACANCY_WORKER_ITEM);
+  const VACANCIES_FINANCE = [...Array(22)].map(it => VACANCY_FINANCE_ITEM);
+  const VACANCIES_PR = [...Array(1)].map(it => VACANCY_PR_ITEM);
+  const VACANCIES_INVEST = [...Array(8)].map(it => VACANCY_INVEST_ITEM);
+
+  const VACANCIES_AUTO_BUSINESS_LIST = [
+    {title: 'Старший менеджер отдела продаж VOLVO', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item one', category: 'auto-business'},
     {title: 'Старший менеджер отдела продаж VOLVO', text: '150 000 – 250 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'auto-business'},
     {title: 'Водитель погрузчика', text: '25 000 – 175 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'auto-business'},
-    {title: 'Водитель на газель', text: '135 000 – 170 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'auto-business'},
+    {title: 'Водитель на газель', text: '135 000 – 170 000 руб, Москва', tag: 'li', className: 'vacancies__item four', category: 'auto-business'},
     {title: 'Водитель с личным грузовым автомобилем', text: '20 000 – 170 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'auto-business'},
     {title: 'Водитель-экспедитор', text: '165 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'auto-business'},
     {title: 'Семейный водитель', text: '20 000 – 150 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'auto-business'},
@@ -11,16 +40,22 @@
     {title: 'Водитель электропогрузчика', text: '90 000 руб, Москва', tag: 'li', className: 'vacancies__item', category: 'auto-business'}
   ];
 
+  const VACANCIES_AUTO_BUSINESS = VACANCIES_AUTO_BUSINESS_LIST.concat([...Array(21 - VACANCIES_AUTO_BUSINESS_LIST.length)].map(it => {
+    return VACANCIES_AUTO_BUSINESS_LIST[getRandomInteger(0, VACANCIES_AUTO_BUSINESS_LIST.length - 1)];
+  }));
+
+  const VACANCIES_LIST = VACANCIES_AUTO_BUSINESS.concat(VACANCIES_IT, VACANCIES_AGRO, VACANCIES_ADMIN, VACANCIES_WORKER, VACANCIES_FINANCE, VACANCIES_PR, VACANCIES_INVEST);
+
   const VACANCIES_MENU = [
     {text: 'Автомобильный бизнес', counter: '21', target: 'auto-business'},
-    {text: 'Информационные технологии, интернет, телеком', counter: '12', target: ''},
-    {text: 'Производство, сельское хозяйство', counter: '33', target: ''},
-    {text: 'Административный персонал', counter: '6', target: ''},
-    {text: 'Рабочий персонал', counter: '4', target: ''},
-    {text: 'Бухгалтерия, управленческий учет, финансы предприятия', counter: '22', target: ''},
-    {text: 'Маркетинг, реклама, PR', counter: '1', target: ''},
-    {text: 'Банки, инвестиции, лизинг', counter: '8', target: ''},
-    {text: 'Управление персоналом, тренинги', counter: '', target: ''}
+    {text: 'Информационные технологии, интернет, телеком', counter: '12', target: 'it'},
+    {text: 'Производство, сельское хозяйство', counter: '33', target: 'agro'},
+    {text: 'Административный персонал', counter: '6', target: 'admin'},
+    {text: 'Рабочий персонал', counter: '4', target: 'worker'},
+    {text: 'Бухгалтерия, управленческий учет, финансы предприятия', counter: '22', target: 'finance'},
+    {text: 'Маркетинг, реклама, PR', counter: '1', target: 'pr'},
+    {text: 'Банки, инвестиции, лизинг', counter: '8', target: 'invest'},
+    {text: 'Управление персоналом, тренинги', counter: '', target: 'control'}
   ];
 
   const AWARDS_2021 = [
