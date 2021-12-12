@@ -2,7 +2,6 @@ window.addEventListener('load', () => {
   const scrollAsideBtnUp = document.querySelector('.vacancies__aside-scroll-btn--up');
   const scrollAsideBtnDown = document.querySelector('.vacancies__aside-scroll-btn--down');
 
-  //const menuItems = document.querySelectorAll('.vacancies__menu-item');
   const vacanciesAsideSimplebarElement = document.querySelector('.__js_vacancies-aside-simplebar');
   const vacanciesAsideSimplebar = new SimpleBar(vacanciesAsideSimplebarElement);
 

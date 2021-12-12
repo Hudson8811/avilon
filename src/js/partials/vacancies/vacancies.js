@@ -1,5 +1,6 @@
 //= scroll-main.js
 // scroll-aside.js
+/*
  window.addEventListener('load', () => {
 
   const vacanciesMain = document.querySelector('.vacancies__main');

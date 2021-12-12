@@ -3,36 +3,7 @@ window.addEventListener('load', () => {
   
   const vacanciesList = document.querySelector('.vacancies__list');
 
-  const createVacancyPreviewTemplate = ({title, text, date}) => {
-    return `<li class="vacancies__item vacancy-preview">
-      <div class="vacancy-preview__title">${title}</div>
-      <div class="vacancy-preview__text">${text}</div>
-      <time class="vacancy-preview__date" datetime="2021-11-18">${date}</time>
-      <div class="vacancy-preview__action"> 
-        <button class="vacancy-preview__more" type="button" data-vacancy-name="${title}">Подробнее</button>
-      </div>
-      <span class="vacancy-preview__icon"> 
-          <svg  width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg"><path d="M.293 9.293a1 1 0 1 0 1.414 1.414L.293 9.293ZM11 1a1 1 0 0 0-1-1H1a1 1 0 1 0 0 2h8v8a1 1 0 1 0 2 0V1Zm-9.293 9.707 9-9L9.293.293l-9 9 1.414 1.414Z"/></svg>
-      </span>
-    </li>`;
-  };
 
-  const createVacanciesMenuItemTemplate = ({name, id, items}, isCurrent) => {
-    return `<li class="vacancies__menu-item${isCurrent ? ' vacancies__menu-item--current' : ''}">
-      <a href="#" data-target="${id}">${name} (${items.length})</a>
-    </li>`
-  }
-  
-  const createOptionAsideSelectTemplate = ({name, id, items}) => {
-    return `<option value="${id}">${name} (${items.length})</option>`
-  }
-
-  const createElement = (template) => {
-    const newElement = document.createElement('div');
-    newElement.innerHTML = template;
-
-    return newElement.firstChild;
-  };
 
   ////////////// Aside
   const scrollAsideBtnUp = document.querySelector('.vacancies__aside-scroll-btn--up');
@@ -40,7 +11,6 @@ window.addEventListener('load', () => {
 
   const vacanciesAsideSimplebarElement = document.querySelector('.__js_vacancies-aside-simplebar');
   
-  const vacanciesMenu = document.querySelector('.vacancies__menu');
   let vacanciesAsideSimplebar = null;//new SimpleBar(vacanciesAsideSimplebarElement);
 
   let asideScrollElement = null;//vacanciesAsideSimplebar.getScrollElement();
@@ -91,19 +61,11 @@ window.addEventListener('load', () => {
   const scrollMainBtnDown = document.querySelector('.vacancies__main-scroll-btn--down');
 
   const vacanciesMainSimplebarElement = document.querySelector('.__js_vacancies-main-simplebar');
-  //const vacancyPreviewItems = vacanciesList.children;
-  const vacanciesMain = document.querySelector('.vacancies__main');
-  const asideVacanciesCategoriesSelect = document.querySelector('.__js_choice');
 
   let vacanciesMainSimplebar = null;
   let scrollElement = null;
   let scrolledElement = null;
 
-  /*const destroySimplebar = (wrapperElement, innerElement) => {
-    wrapperElement.removeAttribute('data-simplebar');
-    wrapperElement.innerHTML = '';
-    wrapperElement.appendChild(innerElement);
-  };*/
 
   const scrollMain = (direction = 1) => {
     scrollElement.scrollBy({
@@ -114,33 +76,13 @@ window.addEventListener('load', () => {
   };
 
   
-  let vacancyPreviewRect, scrolledElementRect, vacanciesListHeight, lineHeight, 
-  vacancyPreviewItemsInLineCount, lineCount, lineGap, scrollSize, endPointScroll = null;
+  let  lineGap, endPointScroll = null;
 
   const refreshVars = () => {
-     /*
-      visibleVacancyPreviewItems = Array.from(vacancyPreviewItems).filter(it => it.style.display === 'block');
-
-      if (visibleVacancyPreviewItems.length) {
-        vacancyPreviewRect = visibleVacancyPreviewItems[0].getBoundingClientRect();
-        scrolledElementRect = scrolledElement.getBoundingClientRect();
-        vacanciesListHeight = vacanciesList.getBoundingClientRect().height;
-
-        lineHeight = vacancyPreviewRect.height;
-        vacancyPreviewItemsInLineCount = Math.floor(scrolledElementRect.width / vacancyPreviewRect.width);
-
-        lineCount = Math.ceil(visibleVacancyPreviewItems.length / vacancyPreviewItemsInLineCount);
-        lineGap = (vacanciesListHeight - (lineCount * Math.floor(vacancyPreviewRect.height))) / lineCount;
-        //console.log('refresh lineHeight and lineGap: ' + lineHeight + ' ' + lineGap);
-        scrollSize = lineHeight + lineGap;
-        endPointScroll = Math.floor(scrolledElementRect.height) - scrollElement.offsetHeight;
-      } 
-    */
-      
     asideScrollElementHeight = asideScrollElement.offsetHeight;// изменится при ресайзе
     asideScrolledElementHeight = asideScrolledElement.offsetHeight;// изменится при ресайзе
     asideScrollSize = 100;;//Math.floor(asideScrolledElementHeight / menuItems.length);//заменить линну масива
-    
+
     asideEndPointScroll = Math.floor(asideScrolledElementHeight) - Math.floor(asideScrollElementHeight);
 
     endPointScroll = Math.floor(scrolledElement.offsetHeight) - Math.floor(scrollElement.offsetHeight);
@@ -148,7 +90,7 @@ window.addEventListener('load', () => {
   };
 
   const checkMainScrollNeed = () => {
-    
+
     if (scrollElement.scrollTop >= endPointScroll) {
       scrollMainBtnDown.classList.add('scroll-btn--inactive');
     } else {
@@ -160,7 +102,7 @@ window.addEventListener('load', () => {
     } else {
       scrollMainBtnUp.classList.remove('scroll-btn--inactive');
     }
-    
+
     if (endPointScroll <= 0) {
       scrollMainBtnUp.classList.add('scroll-btn--inactive');
       scrollMainBtnDown.classList.add('scroll-btn--inactive');
@@ -168,30 +110,9 @@ window.addEventListener('load', () => {
     //console.log(scrollElement.offsetHeight, scrolledElement.offsetHeight)
   };
 
-  
 
-  let loadedData = null;
 
-  fetch('./js/data.json')
-    .then(response => response.json())
-    .then(data => {
-      loadedData = data;
-
-      loadedData.forEach((item, index) => {
-        asideVacanciesCategoriesSelect.appendChild( createElement(createOptionAsideSelectTemplate(item)) );
-        vacanciesMenu.appendChild( createElement(createVacanciesMenuItemTemplate(item, index === 0)) );
-      });
-
-      loadedData[0].items.forEach(item => {
-        vacanciesList.appendChild( createElement(createVacancyPreviewTemplate(item)) );
-      });
-    })
-    .then(() => {
-      const choices = new Choices(asideVacanciesCategoriesSelect);
-      console.clear()
-      //console.log(vacanciesMainSimplebarElement)
-
-      if (html.clientWidth >= 1080) {
+    if (html.clientWidth >= 1080) {
         vacanciesMainSimplebar = new SimpleBar(vacanciesMainSimplebarElement);
 
         scrollElement = vacanciesMainSimplebar.getScrollElement();
@@ -201,63 +122,18 @@ window.addEventListener('load', () => {
 
         asideScrollElement = vacanciesAsideSimplebar.getScrollElement();
         asideScrolledElement = asideScrollElement.firstElementChild;
-      }
 
-      /*window.addEventListener('resize', () => {
-        if (html.clientWidth < 1080 && vacanciesMainSimplebar) {
-          destroySimplebar(vacanciesMainSimplebarElement, vacanciesList);
-          vacanciesMainSimplebar = null;
-            
-          scrollElement = null;
-          scrolledElement = null;
-
-        } else if (html.clientWidth >= 1080 && !vacanciesMainSimplebar) {
-          vacanciesMainSimplebar = new SimpleBar(document.querySelector('.__js_vacancies-main-simplebar'));
-          console.log(vacanciesMainSimplebar)
-
-          scrollElement = vacanciesMainSimplebar.getScrollElement();
-          scrolledElement = scrollElement.firstElementChild;
-        }
-      });*/
-    })
-    .then(() => {
-      refreshVars();
-      checkMainScrollNeed();
-      checkAsideScrollNeed();
-    });
-
-    
-  vacanciesMenu.onclick = (e) => {
-    const target = e.target.closest('.vacancies__menu-item:not(.vacancies__menu-item--current)');
-
-    if (target) {
-      e.preventDefault();
-      const vacancyDetail = document.querySelector('.vacancy-detail');
-
-      if (vacancyDetail && vacancyDetail.classList.contains('opened')) {
-        vacancyDetail.classList.remove('opened');
-      }
-
-      document.querySelector('.vacancies__menu-item--current').classList.remove('vacancies__menu-item--current');
-      target.classList.add('vacancies__menu-item--current');
-
-      const categoryId = target.firstElementChild.dataset.target;
-      
-
-      const categoryVacancies = loadedData.find(item => item.id == categoryId).items;
-      vacanciesList.innerHTML = '';
-      categoryVacancies.forEach(item => {
-        vacanciesList.appendChild( createElement(createVacancyPreviewTemplate(item)) );
-      });
-      
-      refreshVars();
-      checkMainScrollNeed();
+        vacanciesMainSimplebar.getScrollElement().addEventListener('scroll', checkMainScrollNeed);
+        vacanciesAsideSimplebar.getScrollElement().addEventListener('scroll', checkAsideScrollNeed);
     }
-  }
 
 
 
-  //////////////////////
+    refreshVars();
+    checkMainScrollNeed();
+    checkAsideScrollNeed();
+    
+
 
   scrollAsideBtnUp.onclick = () => {
     scrollAside(-1);
@@ -275,34 +151,135 @@ window.addEventListener('load', () => {
     scrollMain(1);
   };
 
-  vacanciesMainSimplebar.getScrollElement().addEventListener('scroll', checkMainScrollNeed);
-  vacanciesAsideSimplebar.getScrollElement().addEventListener('scroll', checkAsideScrollNeed);
 
-  //////////// Фильтрация
-  /*const filterVacancies = (target) => {
-    vacanciesMain.classList.add('animate');
-    vacanciesMain.classList.add('hidden');
+    var choices = new Choices('.__js_choice');
 
-    vacanciesMain.ontransitionend = () => {
-      vacanciesMain.ontransitionend = null;
-      vacanciesMain.classList.remove('animate');
+    var ajaxAllow = true;
+    $(document).on('click touch','.vacancies__menu-item a', function (){
+        event.preventDefault();
+        if (ajaxAllow){
+            ajaxAllow = false;
+            let parent = $(this).parent();
+            parent.addClass('vacancies__menu-item--current').siblings().removeClass('vacancies__menu-item--current');
+            $('.vacancy-detail').removeClass('opened');
+            let cat = parseInt($(this).data('catid'));
+            getVacancies(cat);
+        }
+    });
 
-      vacancyPreviewItems.forEach(it => {
-        it.style.display = it.dataset.category === target ? 'block' : 'none';
-      });
-      
-      scrollElement.scrollTop = 0;
+    $(document).on('change','.js-select-vacancy',function (){
+        if (ajaxAllow){
+            ajaxAllow = false;
+            $('.vacancy-detail').removeClass('opened');
+            let cat = parseInt($(this).val());
+            getVacancies(cat);
+        }
+    });
 
-      vacanciesMain.classList.add('animate');
-      vacanciesMain.classList.remove('hidden');
-        
-      vacanciesMain.ontransitionend = () => {
-        vacanciesMain.ontransitionend = null;
-        vacanciesMain.classList.remove('animate');
-        refreshVars();
-        checkMainScrollNeed();
-      };
+    function getVacancies(cat){
+        $.ajax({
+            url : '/Avilon/get_cat.php',
+            data :  {cat : cat},
+            type : 'POST',
+            beforeSend : function ( xhr ) {
+                $('.vacancies__list').fadeOut(100);
+            },
+            success : function( data ){
+                $('.vacancies__list').html(data).hide().fadeIn(300);
+                setTimeout(function (){
+                    ajaxAllow = true;
+                    refreshVars();
+                    checkMainScrollNeed();
+                    checkAsideScrollNeed();
+                },300);
+            },
+            error : function (){
+                ajaxAllow = true;
+            }
+        });
     }
-  };*/
+
+    $(document).on('click touch','.vacancy-preview__more', function (){
+        event.preventDefault();
+        if (ajaxAllow){
+            ajaxAllow = false;
+            let id = $(this).data('id');
+            getVacancy(id);
+        }
+    });
+
+    $(document).on('click touch','.vacancy-detail__close', function (){
+        event.preventDefault();
+        $('.vacancy-detail').removeClass('opened');
+    });
+    $(document).on('click touch','.js-response', function (){
+        event.preventDefault();
+        showResposeModal();
+    });
+
+    function getVacancy(id){
+        $.ajax({
+            url : '/Avilon/get_cat.php',
+            data :  {id : id},
+            type : 'POST',
+            dataType : 'json',
+            beforeSend : function ( xhr ) {},
+            success : function( data ){
+                $('.vacancy-detail__title').text(data.name);
+                $('.vacancy-detail__price b').html(data.price);
+                $('.vacancy-detail__city').text(data.city);
+                $('.vacancy-detail__location').text(data.location);
+                $('.vacancy-detail__responsibilities').html(data.responsibilities);
+                $('.vacancy-detail__requirements').html(data.requirements);
+                $('.vacancy-detail__conditions').html(data.conditions);
+                $('.response-vacancy [name="id"]').val(id);
+                $('.vacancy-detail').addClass('opened');
+                setTimeout(function (){
+                    ajaxAllow = true;
+                },300);
+            },
+            error : function (){
+                ajaxAllow = true;
+            }
+        });
+    }
+
+    function showResposeModal(){
+        $('.response-vacancy').show();
+    }
+    function hideResposeModal(){
+        $('.response-vacancy').hide();
+    }
+
+    $(document).on('submit', '.response-form',function (){
+        event.preventDefault();
+        if (ajaxAllow) {
+            ajaxAllow = false;
+            let form = $(this);
+            $.ajax({
+                url : '/Avilon/add_response.php',
+                data :  new FormData(this),
+                type : 'POST',
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                //dataType: 'json',
+                beforeSend : function ( xhr ) {
+                    form.find('.cform__send .button-with-arrow__text').text('Отправка...');
+                },
+                success : function( data ){
+                    alert('Заявка отправлена');
+                    hideResposeModal();
+                    form.trigger("reset");
+                    form.find('.cform__send .button-with-arrow__text').text('Отправить заявку');
+                    ajaxAllow = true;
+                },
+                error : function (data){
+                    alert('Ошибка отправки');
+                    ajaxAllow = true;
+                }
+            });
+        }
+    });
 
 });

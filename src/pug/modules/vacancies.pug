@@ -12,7 +12,7 @@ section.vacancies
 
         .vacancies__aside-scroll-wrapper.__js_vacancies-aside-simplebar
           ul.vacancies__menu
-            //-each item, index in VACANCIES_MENU
+            each item, index in VACANCIES_MENU
               li.vacancies__menu-item(class= (index === 0 ? ' vacancies__menu-item--current' : ''))
                 a(href="#", data-target= item.target)= item.text + (item.counter ? ` (${item.counter})` : '')
 
@@ -20,7 +20,7 @@ section.vacancies
 
         .vacancies__aside-select 
           select.__js_choice(name="vacancies")
-            //-each item in VACANCIES_MENU
+            each item in VACANCIES_MENU
               option(value= item.target)= item.text + (item.counter ? ` (${item.counter})` : '')
        
 
@@ -30,7 +30,7 @@ section.vacancies
 
         .vacancies__main-scroll-wrapper.__js_vacancies-main-simplebar
           ul.vacancies__list
-            //-each item in VACANCIES_LIST
+            each item in VACANCIES_LIST
               +vacancy-preview(item)
         
         +scroll-btn('down', 'vacancies__main-scroll-btn vacancies__main-scroll-btn--down')
