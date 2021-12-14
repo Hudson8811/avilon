@@ -61,6 +61,9 @@ window.addEventListener('load', () => {
   const scrollMainBtnDown = document.querySelector('.vacancies__main-scroll-btn--down');
 
   const vacanciesMainSimplebarElement = document.querySelector('.__js_vacancies-main-simplebar');
+  const vacancyDetailMain = document.querySelector('.__js_vacancy-detail-mainsimplebar');
+
+  new SimpleBar(vacancyDetailMain);
 
   let vacanciesMainSimplebar = null;
   let scrollElement = null;

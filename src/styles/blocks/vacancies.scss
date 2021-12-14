@@ -35,6 +35,7 @@
       max-width: 562px;
       margin-left: 140px;
       margin-right: 40px;
+      margin-bottom: 22px;
       padding: 40px 0;
       align-self: center;
 
@@ -48,10 +49,12 @@
   }
 
   &__short {
-    margin-top: 40px;
+    margin-top: 26px;
+    line-height: 1.6;
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     height: 820px;
     background-color: $asphalt-c9;
@@ -179,6 +182,10 @@
     }
 
     &-select {
+      select {
+        display: block;
+        width: 100%;
+      }
       @include min(md) {
         display: none;
       }
@@ -245,7 +252,7 @@
   }
 
   &__main {
-    position: relative;
+    //position: relative;
     width: calc(100% - 410px);
     padding: 42px 0 42px 42px;
 
@@ -328,14 +335,32 @@
   &__detail {
     position: absolute;
     top: 42px;
-    left: 42px;
+    left: calc((100% - 1800px) / 2 + (1800px * 25.26041666666667%));
     z-index: 3;
     transform: translateX(100%);
     opacity: 0;
-    width: calc(100% + 33px);
+    width: 74.73958333333333%; //calc(100% + 33px);
+    max-width: 1393px;
     height: calc(100% - 84px);
 
     transition: transform 0.5s ease, opacity 0.5s ease;
+
+    @include max(1800) {
+      left: auto;
+      right: 0;
+      width: calc(100% - 467px);
+    }
+
+    @include max(md) {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 99;
+      width: auto;
+      height: auto;
+    }
 
     &.opened {
       transform: translateX(0);

@@ -1,0 +1,25 @@
+section.contact
+  .container
+    .contact__note Не нашли подходящую вакансию? <br>Свяжитесь с нами!
+  .contact__wrapper
+    .container 
+      // ::before
+      .contact__form.cform
+        form(action="#", method="post")
+          +field({type: 'text', name: 'firstname', hint: 'ФИО', className: 'cform__field field--text-center'})
+
+          +field({type: 'text', name: 'dateOfBirth', hint: 'Дата рождения', className: 'cform__field field--text-center'})
+          +field({type: 'email', name: 'email', hint: 'Email', className: 'cform__field field--text-center'})
+          +field({type: 'tel', name: 'phone', hint: 'Номер телефона', className: 'cform__field field--text-center'})
+
+          // file upload
+          label.cform__file.file-upload.file-upload--center
+            input.visually-hidden(type="file", name="cvFile")
+            span.file-upload__text Прикрепить резюме
+            span.file-upload__icon 
+              +icon('attach-file')(width="40", height="40")
+
+          +field({type: 'textarea', name: 'message', hint: 'Комментарий', className: 'cform__field field--text-center'})
+
+          
+          +button-with-arrow({tag: 'button', typeOrHref: 'submit', text: 'Отправить заявку', className: 'cform__send cform__send--center button-with-arrow--outline-light'})

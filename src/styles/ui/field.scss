@@ -3,13 +3,21 @@
   display: block;
   width: 100%;
 
+  &--text-center {
+    input,
+    textarea {
+      text-align: center;
+    }
+  }
+
   input,
   textarea {
     display: block;
     width: 100%;
-    padding: 0 0 25px;
+    padding: 0 0 21px;
     font-size: 20px;
     line-height: 1;
+    letter-spacing: 0.1em;
     color: $white;
     border: none;
 
@@ -25,6 +33,20 @@
     @include hover {
       border-bottom-color: $white;
     }
+
+    &::placeholder {
+      color: $grey-75;
+      opacity: 1;
+    }
+
+    @include max(xs) {
+      font-size: 16px;
+    }
+  }
+
+  textarea {
+    height: 42px;
+    resize: none;
   }
 
   &__hint {
@@ -37,11 +59,6 @@
     letter-spacing: 0.05em;
 
     transition: transform $transition;
-  }
-
-  &::placeholder {
-    color: $grey-75;
-    opacity: 1;
   }
 
   input:focus + &__hint,

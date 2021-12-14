@@ -9,9 +9,32 @@
     <title>Главная</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__logo"><img src="images/logo.svg" width="134" height="23" alt="Logo avilon"></div>
+      </div>
+    </header>
     <main class="main">
-      <!--include ../modules/hero-->
+      <section class="hero"> 
+        <div class="hero__container container"> 
+          <div class="hero__column hero__column--main"> 
+            <h1 class="hero__title title">Приглашаем на работу в&nbsp;Авилон!</h1>
+            <ul class="hero__list">
+              <li>Автобизнес</li>
+              <li>Логистика</li>
+              <li>Агрохолдинг</li>
+              <li>АВИЛОН Плаза</li>
+              <li>Ресторан AssuntaMadre</li>
+              <li>Девелопмент</li>
+              <li>Управление автопарками</li>
+            </ul>
+          </div>
+          <div class="hero__column hero__column--aside">
+            <div class="hero__image"> <img src="images/hero-image.jpg" width="1434" height="900" alt=""></div>
+            <div class="hero__text">ГК «АВИЛОН» — один из лидирующих многопрофильных холдингов России, что подтверждает большое количество наград, которыми удостоен ГК «АВИЛОН».</div>
+          </div>
+        </div>
+      </section>
       <section class="vacancies">
         <header class="vacancies__header">
           <div class="container">
@@ -168,23 +191,12 @@
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
                       </svg></span>
                   </li>
-                  <li class="vacancies__item one vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Старший менеджер отдела продаж VOLVO</div>
-                    <div class="vacancy-preview__text">150 000 – 250 000 руб, Москва</div>
+                  <li class="vacancies__item four vacancy-preview" data-category="auto-business">
+                    <div class="vacancy-preview__title">Водитель на газель</div>
+                    <div class="vacancy-preview__text">135 000 – 170 000 руб, Москва</div>
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Старший менеджер отдела продаж VOLVO">Подробнее</button>
-                    </div><span class="vacancy-preview__icon"> 
-                      <svg width="11" height="11">
-                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
-                      </svg></span>
-                  </li>
-                  <li class="vacancies__item one vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Старший менеджер отдела продаж VOLVO</div>
-                    <div class="vacancy-preview__text">150 000 – 250 000 руб, Москва</div>
-                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
-                    <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Старший менеджер отдела продаж VOLVO">Подробнее</button>
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель на газель">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
@@ -218,6 +230,28 @@
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
                       <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель электропогрузчика">Подробнее</button>
+                    </div><span class="vacancy-preview__icon"> 
+                      <svg width="11" height="11">
+                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
+                      </svg></span>
+                  </li>
+                  <li class="vacancies__item vacancy-preview" data-category="auto-business">
+                    <div class="vacancy-preview__title">Семейный водитель</div>
+                    <div class="vacancy-preview__text">20 000 – 150 000 руб, Москва</div>
+                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
+                    <div class="vacancy-preview__action"> 
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Семейный водитель">Подробнее</button>
+                    </div><span class="vacancy-preview__icon"> 
+                      <svg width="11" height="11">
+                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
+                      </svg></span>
+                  </li>
+                  <li class="vacancies__item one vacancy-preview" data-category="auto-business">
+                    <div class="vacancy-preview__title">Старший менеджер отдела продаж VOLVO</div>
+                    <div class="vacancy-preview__text">150 000 – 250 000 руб, Москва</div>
+                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
+                    <div class="vacancy-preview__action"> 
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Старший менеджер отдела продаж VOLVO">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
@@ -234,12 +268,23 @@
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
                       </svg></span>
                   </li>
-                  <li class="vacancies__item one vacancy-preview" data-category="auto-business">
+                  <li class="vacancies__item vacancy-preview" data-category="auto-business">
                     <div class="vacancy-preview__title">Старший менеджер отдела продаж VOLVO</div>
                     <div class="vacancy-preview__text">150 000 – 250 000 руб, Москва</div>
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
                       <button class="vacancy-preview__more" type="button" data-vacancy-name="Старший менеджер отдела продаж VOLVO">Подробнее</button>
+                    </div><span class="vacancy-preview__icon"> 
+                      <svg width="11" height="11">
+                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
+                      </svg></span>
+                  </li>
+                  <li class="vacancies__item four vacancy-preview" data-category="auto-business">
+                    <div class="vacancy-preview__title">Водитель на газель</div>
+                    <div class="vacancy-preview__text">135 000 – 170 000 руб, Москва</div>
+                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
+                    <div class="vacancy-preview__action"> 
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель на газель">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
@@ -257,44 +302,22 @@
                       </svg></span>
                   </li>
                   <li class="vacancies__item vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Семейный водитель</div>
-                    <div class="vacancy-preview__text">20 000 – 150 000 руб, Москва</div>
+                    <div class="vacancy-preview__title">Водитель погрузчика</div>
+                    <div class="vacancy-preview__text">25 000 – 175 000 руб, Москва</div>
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Семейный водитель">Подробнее</button>
-                    </div><span class="vacancy-preview__icon"> 
-                      <svg width="11" height="11">
-                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
-                      </svg></span>
-                  </li>
-                  <li class="vacancies__item one vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Старший менеджер отдела продаж VOLVO</div>
-                    <div class="vacancy-preview__text">150 000 – 250 000 руб, Москва</div>
-                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
-                    <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Старший менеджер отдела продаж VOLVO">Подробнее</button>
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель погрузчика">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
                       </svg></span>
                   </li>
                   <li class="vacancies__item vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Водитель с личным грузовым автомобилем</div>
-                    <div class="vacancy-preview__text">20 000 – 170 000 руб, Москва</div>
+                    <div class="vacancy-preview__title">Водитель электропогрузчика</div>
+                    <div class="vacancy-preview__text">90 000 руб, Москва</div>
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель с личным грузовым автомобилем">Подробнее</button>
-                    </div><span class="vacancy-preview__icon"> 
-                      <svg width="11" height="11">
-                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
-                      </svg></span>
-                  </li>
-                  <li class="vacancies__item four vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Водитель на газель</div>
-                    <div class="vacancy-preview__text">135 000 – 170 000 руб, Москва</div>
-                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
-                    <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель на газель">Подробнее</button>
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель электропогрузчика">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
@@ -1262,46 +1285,48 @@
                     </svg>
                   </button>
                 </header>
-                <div class="vacancy-detail__main">
-                  <div class="vacancy-detail__column">
-                    <div class="vacancy-detail__item">
-                      <div class="vacancy-detail__item-hint">Зарплата</div>
-                      <div class="vacancy-detail__item-text"> <b>150 000 – 250 000 руб</b></div>
-                    </div>
-                    <div class="vacancy-detail__item"> 
-                      <div class="vacancy-detail__item-hint">Город</div>
-                      <div class="vacancy-detail__item-text">Москва</div>
-                    </div>
-                    <div class="vacancy-detail__item"> 
-                      <div class="vacancy-detail__item-hint">Место работы</div>
-                      <div class="vacancy-detail__item-text">Россия, Москва, Нижегородская ул., д. 70, корп. 2, эт. 1, пом. 2, оф 1</div>
-                    </div>
-                    <div class="vacancy-detail__item"> 
-                      <div class="vacancy-detail__item-hint">Обязанности</div>
-                      <div class="vacancy-detail__item-text">
-                        <p>Консультирование клиентов в автосалоне, демонстрация автомобилей, проведение тест-драйвов</p>
-                        <p>Контроль процесса оформления проданных автомобилей, постановки на учет, подготовки к выдаче, установки дополнительного оборудования и своевременная выдача автомобилей клиентам</p>
+                <div class="vacancy-detail__main __js_vacancy-detail-mainsimplebar">
+                  <div class="vacancy-detail__main-inner">
+                    <div class="vacancy-detail__column">
+                      <div class="vacancy-detail__item">
+                        <div class="vacancy-detail__item-hint">Зарплата</div>
+                        <div class="vacancy-detail__item-text"> <b>150 000 – 250 000 руб</b></div>
+                      </div>
+                      <div class="vacancy-detail__item"> 
+                        <div class="vacancy-detail__item-hint">Город</div>
+                        <div class="vacancy-detail__item-text">Москва</div>
+                      </div>
+                      <div class="vacancy-detail__item"> 
+                        <div class="vacancy-detail__item-hint">Место работы</div>
+                        <div class="vacancy-detail__item-text">Россия, Москва, Нижегородская ул., д. 70, корп. 2, эт. 1, пом. 2, оф 1</div>
+                      </div>
+                      <div class="vacancy-detail__item"> 
+                        <div class="vacancy-detail__item-hint">Обязанности</div>
+                        <div class="vacancy-detail__item-text">
+                          <p>Консультирование клиентов в автосалоне, демонстрация автомобилей, проведение тест-драйвов</p>
+                          <p>Контроль процесса оформления проданных автомобилей, постановки на учет, подготовки к выдаче, установки дополнительного оборудования и своевременная выдача автомобилей клиентам</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="vacancy-detail__column">
-                    <div class="vacancy-detail__item"> 
-                      <div class="vacancy-detail__item-hint">Требования</div>
-                      <div class="vacancy-detail__item-text"> 
-                        <p>Высшее образование</p>
-                        <p>Опыт работы в продажах автомобилей</p>
-                        <p>Личные качества: коммуникабельность, высокая рабочая мотивация, обучаемость</p>
+                    <div class="vacancy-detail__column">
+                      <div class="vacancy-detail__item"> 
+                        <div class="vacancy-detail__item-hint">Требования</div>
+                        <div class="vacancy-detail__item-text"> 
+                          <p>Высшее образование</p>
+                          <p>Опыт работы в продажах автомобилей</p>
+                          <p>Личные качества: коммуникабельность, высокая рабочая мотивация, обучаемость</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="vacancy-detail__item"> 
-                      <div class="vacancy-detail__item-hint">Условия</div>
-                      <div class="vacancy-detail__item-text"> 
-                        <p>Официальное трудоустройство в штат компании в соответствии с ТК РФ</p>
-                        <p>Обучение со стороны компании и импортера</p>
-                        <p>График работы: сменный</p>
-                        <p>Оплачиваемы отпуска и больничные листы</p>
-                        <p>Отличные возможности профессионального и карьерного роста</p>
-                        <p>Скидки на покупку автомобилей брендов компании и сервисное обслуживание</p>
+                      <div class="vacancy-detail__item"> 
+                        <div class="vacancy-detail__item-hint">Условия</div>
+                        <div class="vacancy-detail__item-text"> 
+                          <p>Официальное трудоустройство в штат компании в соответствии с ТК РФ</p>
+                          <p>Обучение со стороны компании и импортера</p>
+                          <p>График работы: сменный</p>
+                          <p>Оплачиваемы отпуска и больничные листы</p>
+                          <p>Отличные возможности профессионального и карьерного роста</p>
+                          <p>Скидки на покупку автомобилей брендов компании и сервисное обслуживание</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1317,12 +1342,623 @@
           </div>
         </div>
       </section>
-      <!--include ../modules/awards-->
-      <!--include ../modules/advantages-->
-      <!--include ../modules/brands-->
+      <section class="awards">
+        <div class="awards__container container">
+          <h2 class="awards__title title">Награды и достижения</h2>
+          <div class="awards__years swiper __js_years-carousel">
+            <div class="swiper-wrapper">
+              <div class="awards__year swiper-slide" data-target="#awards-2002"><span>2002</span></div>
+              <div class="awards__year swiper-slide" data-target="#awards-2003"><span>2003</span></div>
+              <div class="awards__year swiper-slide" data-target="#awards-2004"><span>2004</span></div>
+              <div class="awards__year swiper-slide" data-target="#awards-2018"><span>2018</span></div>
+              <div class="awards__year swiper-slide" data-target="#awards-2019"><span>2019</span></div>
+              <div class="awards__year swiper-slide" data-target="#awards-2020"><span>2020</span></div>
+              <div class="awards__year swiper-slide" data-target="#awards-2021"><span>2021</span></div>
+            </div>
+            <div class="awards__years-navigation">
+              <button class="arrow-btn arrow-btn--prev" type="button">
+                <svg width="18" height="32">
+                  <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                </svg><span class="visually-hidden">Предыдущий</span>
+              </button>
+              <button class="arrow-btn arrow-btn--next" type="button">
+                <svg width="18" height="32">
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg><span class="visually-hidden">Следующий</span>
+              </button>
+            </div>
+          </div>
+          <div class="awards__wrapper inactive">
+            <div class="awards__carousel">
+              <div class="swiper __js_awards-carousel" id="awards-2002">
+                <div class="swiper-wrapper"> 
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Volkswagen</span></div>
+                      <div class="award-preview__text">По итогам 2020 года дилерский центр АВИЛОН Volkswagen стал лидером по объему продаж автомобилей в Volkswagen России, и был отмечен сертификатом марки за вклад в развитие продаж автомобилей Volkswagen в 2020 году.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/vw-2021.jpg" srcset="images/awards/vw-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                </div>
+                <div class="awards__carousel-navigation">
+                  <button class="arrow-btn arrow-btn--round arrow-btn--prev" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                    </svg><span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="arrow-btn arrow-btn--round arrow-btn--next" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                    </svg><span class="visually-hidden">Следующий</span>
+                  </button>
+                </div>
+              </div>
+              <div class="awards__carousel-progress"></div>
+            </div>
+            <div class="awards__carousel">
+              <div class="swiper __js_awards-carousel" id="awards-2003">
+                <div class="swiper-wrapper"> 
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Volkswagen</span></div>
+                      <div class="award-preview__text">По итогам 2020 года дилерский центр АВИЛОН Volkswagen стал лидером по объему продаж автомобилей в Volkswagen России, и был отмечен сертификатом марки за вклад в развитие продаж автомобилей Volkswagen в 2020 году.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/vw-2021.jpg" srcset="images/awards/vw-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                </div>
+                <div class="awards__carousel-navigation">
+                  <button class="arrow-btn arrow-btn--round arrow-btn--prev" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                    </svg><span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="arrow-btn arrow-btn--round arrow-btn--next" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                    </svg><span class="visually-hidden">Следующий</span>
+                  </button>
+                </div>
+              </div>
+              <div class="awards__carousel-progress"></div>
+            </div>
+            <div class="awards__carousel">
+              <div class="swiper __js_awards-carousel" id="awards-2004">
+                <div class="swiper-wrapper"> 
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Volkswagen</span></div>
+                      <div class="award-preview__text">По итогам 2020 года дилерский центр АВИЛОН Volkswagen стал лидером по объему продаж автомобилей в Volkswagen России, и был отмечен сертификатом марки за вклад в развитие продаж автомобилей Volkswagen в 2020 году.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/vw-2021.jpg" srcset="images/awards/vw-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                </div>
+                <div class="awards__carousel-navigation">
+                  <button class="arrow-btn arrow-btn--round arrow-btn--prev" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                    </svg><span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="arrow-btn arrow-btn--round arrow-btn--next" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                    </svg><span class="visually-hidden">Следующий</span>
+                  </button>
+                </div>
+              </div>
+              <div class="awards__carousel-progress"></div>
+            </div>
+            <div class="awards__carousel">
+              <div class="swiper __js_awards-carousel" id="awards-2018">
+                <div class="swiper-wrapper"> 
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Volkswagen</span></div>
+                      <div class="award-preview__text">По итогам 2020 года дилерский центр АВИЛОН Volkswagen стал лидером по объему продаж автомобилей в Volkswagen России, и был отмечен сертификатом марки за вклад в развитие продаж автомобилей Volkswagen в 2020 году.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/vw-2021.jpg" srcset="images/awards/vw-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                </div>
+                <div class="awards__carousel-navigation">
+                  <button class="arrow-btn arrow-btn--round arrow-btn--prev" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                    </svg><span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="arrow-btn arrow-btn--round arrow-btn--next" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                    </svg><span class="visually-hidden">Следующий</span>
+                  </button>
+                </div>
+              </div>
+              <div class="awards__carousel-progress"></div>
+            </div>
+            <div class="awards__carousel">
+              <div class="swiper __js_awards-carousel" id="awards-2019">
+                <div class="swiper-wrapper"> 
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Volkswagen</span></div>
+                      <div class="award-preview__text">По итогам 2020 года дилерский центр АВИЛОН Volkswagen стал лидером по объему продаж автомобилей в Volkswagen России, и был отмечен сертификатом марки за вклад в развитие продаж автомобилей Volkswagen в 2020 году.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/vw-2021.jpg" srcset="images/awards/vw-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                </div>
+                <div class="awards__carousel-navigation">
+                  <button class="arrow-btn arrow-btn--round arrow-btn--prev" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                    </svg><span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="arrow-btn arrow-btn--round arrow-btn--next" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                    </svg><span class="visually-hidden">Следующий</span>
+                  </button>
+                </div>
+              </div>
+              <div class="awards__carousel-progress"></div>
+            </div>
+            <div class="awards__carousel">
+              <div class="swiper __js_awards-carousel" id="awards-2020">
+                <div class="swiper-wrapper"> 
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Volkswagen</span></div>
+                      <div class="award-preview__text">По итогам 2020 года дилерский центр АВИЛОН Volkswagen стал лидером по объему продаж автомобилей в Volkswagen России, и был отмечен сертификатом марки за вклад в развитие продаж автомобилей Volkswagen в 2020 году.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/vw-2021.jpg" srcset="images/awards/vw-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                </div>
+                <div class="awards__carousel-navigation">
+                  <button class="arrow-btn arrow-btn--round arrow-btn--prev" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                    </svg><span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="arrow-btn arrow-btn--round arrow-btn--next" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                    </svg><span class="visually-hidden">Следующий</span>
+                  </button>
+                </div>
+              </div>
+              <div class="awards__carousel-progress"></div>
+            </div>
+            <div class="awards__carousel">
+              <div class="swiper __js_awards-carousel" id="awards-2021">
+                <div class="swiper-wrapper"> 
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Volkswagen</span></div>
+                      <div class="award-preview__text">По итогам 2020 года дилерский центр АВИЛОН Volkswagen стал лидером по объему продаж автомобилей в Volkswagen России, и был отмечен сертификатом марки за вклад в развитие продаж автомобилей Volkswagen в 2020 году.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/vw-2021.jpg" srcset="images/awards/vw-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                  <div class="awards__item swiper-slide award-preview">
+                    <div class="award-preview__main">
+                      <div class="award-preview__title">АВИЛОН <span>Mercedes</span></div>
+                      <div class="award-preview__text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    </div>
+                    <div class="award-preview__image"><img src="images/awards/mercedes-2021.jpg" srcset="images/awards/mercedes-2021@2x.jpg" width="432" height="418" alt=""><span class="award-preview__icon">
+                        <svg width="104" height="104">
+                          <use xlink:href="./images/sprite.svg#vw"></use>
+                        </svg></span></div>
+                  </div>
+                </div>
+                <div class="awards__carousel-navigation">
+                  <button class="arrow-btn arrow-btn--round arrow-btn--prev" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                    </svg><span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="arrow-btn arrow-btn--round arrow-btn--next" type="button">
+                    <svg width="18" height="32">
+                      <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                    </svg><span class="visually-hidden">Следующий</span>
+                  </button>
+                </div>
+              </div>
+              <div class="awards__carousel-progress"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="advantages__main">
+          <div class="container">
+            <div class="advantages__wrapper">
+              <h2 class="advantages__title title">Преимущества</h2>
+              <ul class="advantages__list">
+                <li class="advantages__item advantage">
+                  <div class="advantage__icon">
+                    <svg width="78" height="76">
+                      <use xlink:href="./images/sprite.svg#advantage-icon-1"></use>
+                    </svg>
+                  </div>
+                  <div class="advantage__text">Работа в команде единомышленников</div>
+                </li>
+                <li class="advantages__item advantage">
+                  <div class="advantage__icon">
+                    <svg width="104" height="70">
+                      <use xlink:href="./images/sprite.svg#advantage-icon-2"></use>
+                    </svg>
+                  </div>
+                  <div class="advantage__text">Обучение</div>
+                </li>
+                <li class="advantages__item advantage">
+                  <div class="advantage__icon">
+                    <svg width="69" height="82">
+                      <use xlink:href="./images/sprite.svg#advantage-icon-3"></use>
+                    </svg>
+                  </div>
+                  <div class="advantage__text">Социальные гарантии</div>
+                </li>
+                <li class="advantages__item advantage">
+                  <div class="advantage__icon">
+                    <svg width="66" height="67">
+                      <use xlink:href="./images/sprite.svg#advantage-icon-4"></use>
+                    </svg>
+                  </div>
+                  <div class="advantage__text">Корпоративные мероприятия</div>
+                </li>
+                <li class="advantages__item advantage">
+                  <div class="advantage__icon">
+                    <svg width="78" height="74">
+                      <use xlink:href="./images/sprite.svg#advantage-icon-5"></use>
+                    </svg>
+                  </div>
+                  <div class="advantage__text">Карьерный рост</div>
+                </li>
+                <li class="advantages__item advantage">
+                  <div class="advantage__icon">
+                    <svg width="93" height="92">
+                      <use xlink:href="./images/sprite.svg#advantage-icon-6"></use>
+                    </svg>
+                  </div>
+                  <div class="advantage__text">Скидки для сотрудников</div>
+                </li>
+              </ul>
+            </div>
+            <div class="advantages__video video">
+              <div class="video__inner">
+                <div class="video__placeholder">
+                  <button class="video__play" type="button">
+                    <svg width="120" height="120">
+                      <use xlink:href="./images/sprite.svg#play"></use>
+                    </svg>
+                  </button>
+                </div>
+                <video preload>
+                  <source src="video/_vars-video-main__video.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="advantages__bottom">
+          <div class="container">
+            <div class="advantages__text">
+              <p>Работа в ГК «АВИЛОН» – это работа в современных помещениях, оснащенных новейшим оборудованием.</p>
+              <p>Мы гарантируем карьерный рост: большой процент сотрудников добились высоких успехов в компании и сейчас занимают руководящие должности.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="brands">
+        <header class="brands__header"> 
+          <div class="container"> 
+            <h2 class="brands__title title">Бренды</h2>
+          </div>
+        </header>
+        <div class="brands__wrapper">
+          <div class="container">
+            <ul class="brands__list">
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-1.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-2.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-3.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-4.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-5.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-6.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-7.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-8.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-9.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-10.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-11.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-12.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-13.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-14.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-15.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-16.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-17.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-18.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-19.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-20.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-21.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-22.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-23.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-24.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-25.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-26.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-27.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-28.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-29.png"></a></li>
+              <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-30.png"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="brands__businesses"><a class="brands__businesses-item business-preview business-preview--moeleto business-preview--bg-grey" href="http://moeleto.ru"><span class="business-preview__logo"><img src="images/businesses/logo-1.svg" width="200" height="100" alt=""></span><span class="business-preview__type">Агрохолдинг</span><span class="business-preview__site">moeleto.ru</span></a><a class="brands__businesses-item business-preview business-preview--jilinvest" href="http://jil-invest.ru"><span class="business-preview__logo"><img src="images/businesses/logo-2.svg" width="269" height="40" alt=""></span><span class="business-preview__type">Девелопмент</span><span class="business-preview__site">jil-invest.ru</span></a><a class="brands__businesses-item business-preview business-preview--avilonplaza business-preview--bg-grey" href="http://avilon-plaza.ru"><span class="business-preview__logo"><img src="images/businesses/logo-3.png" width="256" height="91" alt=""></span><span class="business-preview__type">Бизнес-центр</span><span class="business-preview__site">avilon-plaza.ru</span></a><a class="brands__businesses-item business-preview business-preview--autologistics" href="http://autologistics.ru"><span class="business-preview__logo"><img src="images/businesses/logo-4.svg" width="195" height="54" alt=""></span><span class="business-preview__type">Логистика </span><span class="business-preview__site">autologistics.ru</span></a><a class="brands__businesses-item business-preview business-preview--solt business-preview--bg-light" href="http://solt.msk.ru"><span class="business-preview__logo"><img src="images/businesses/logo-5.svg" width="200" height="53" alt=""></span><span class="business-preview__type">Управление автопарками</span><span class="business-preview__site">solt.msk.ru</span></a><a class="brands__businesses-item business-preview business-preview--assuntamadre" href="http://assuntamadre.ru"><span class="business-preview__logo"><img src="images/businesses/logo-6.svg" width="200" height="87" alt=""></span><span class="business-preview__type">Ресторан</span><span class="business-preview__site">assuntamadre.ru</span></a>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <div class="contact__note">Не нашли подходящую вакансию? <br>Свяжитесь с нами!</div>
+        </div>
+        <div class="contact__wrapper">
+          <div class="container"> 
+            <!-- ::before-->
+            <div class="contact__form cform">
+              <form action="#" method="post">
+                <label class="cform__field field--text-center field">
+                  <input type="text" name="firstname" placeholder="ФИО">
+                </label>
+                <label class="cform__field field--text-center field">
+                  <input type="text" name="dateOfBirth" placeholder="Дата рождения">
+                </label>
+                <label class="cform__field field--text-center field">
+                  <input type="email" name="email" placeholder="Email">
+                </label>
+                <label class="cform__field field--text-center field">
+                  <input type="tel" name="phone" placeholder="Номер телефона">
+                </label>
+                <!-- file upload-->
+                <label class="cform__file file-upload file-upload--center">
+                  <input class="visually-hidden" type="file" name="cvFile"><span class="file-upload__text">Прикрепить резюме</span><span class="file-upload__icon"> 
+                    <svg width="40" height="40">
+                      <use xlink:href="./images/sprite.svg#attach-file"></use>
+                    </svg></span>
+                </label>
+                <label class="cform__field field--text-center field field--textarea">
+                  <textarea name="message" placeholder="Комментарий"></textarea>
+                </label>
+                <button class="cform__send cform__send--center button-with-arrow--outline-light button-with-arrow" type="submit"><span class="button-with-arrow__text">Отправить заявку</span><span class="button-with-arrow__icon"> 
+                    <svg width="30" height="16">
+                      <use xlink:href="./images/sprite.svg#long-arrow-right"></use>
+                    </svg></span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
-    <section class="response-vacancy" style="display: block;">
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__logo"><img src="images/logo.svg" width="134" height="23" alt="Logo avilon"></div>
+        <div class="footer__copyright">© 1997—2021 «Авилон»</div>
+      </div>
+    </footer>
+    <section class="response-vacancy" style="display: none;">
       <header class="response-vacancy__header">
         <h2 class="response-vacancy__title">Отклик на вакансию:<span class="response-vacancy__vacancy-name">старший менеджер отдела продаж VOLVO</span></h2>
         <div class="response-vacancy__form cform">
@@ -1346,7 +1982,6 @@
               <label class="cform__field cform__field--half field">
                 <input type="tel" name="phone" placeholder="Номер телефона">
               </label>
-              <!-- file upload-->
               <label class="cform__file file-upload">
                 <input class="visually-hidden" type="file" name="cvFile"><span class="file-upload__text">Прикрепить резюме</span>
               </label>

@@ -1,0 +1,30 @@
+.footer {
+  padding: 48px 0 47px;
+  background-color: $dark-37;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include max(xxs) {
+      flex-direction: column;
+
+      & > * {
+        align-self: center;
+      }
+    }
+  }
+
+  &__copyright {
+    font-family: "Verdana";
+    font-size: 15px;
+    line-height: 1;
+    color: $grey-7b;
+
+    align-self: center;
+
+    @include max(xxs) {
+      margin-top: 24px;
+    }
+  }
+}

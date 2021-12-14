@@ -26,18 +26,18 @@ window.addEventListener('load', () => {
 
         breakpoints: {
           // when window width is >= 320px
-          768: {
-            slidesPerView: 4
+          860: {
+            slidesPerView: 5
           },
           // when window width is >= 480px
-          1200: {
+          1280: {
             slidesPerView: 7
           },
           // when window width is >= 640px
-          1800: {
+          /*1800: {
             slidesPerView: 7
           
-          }
+          }*/
         },
 
         on: {
@@ -73,7 +73,7 @@ window.addEventListener('load', () => {
         const carousel = new Swiper(carouselEl, {
           slidesPerView: 1,
           speed: 300,
-          spaceBetween: 42,
+          spaceBetween: 24,
 
           //loop: true,
           navigation: {
@@ -86,14 +86,19 @@ window.addEventListener('load', () => {
           },
           breakpoints: {
             // when window width is >= 320px
-            768: {
+            0: {
               slidesPerView: 1,
-              spaceBetween: 42
+              spaceBetween: 24
+            },
+            // when window width is >= 320px
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 24
             },
             // when window width is >= 480px
-            1200: {
+            1279: {
               slidesPerView: 2,
-              spaceBetween: 42
+              spaceBetween: 24
             },
             // when window width is >= 640px
             1800: {

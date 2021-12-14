@@ -2,28 +2,49 @@
   padding: 60px 0;
 
   &__header {
-    margin: 0 0 80px;
-    padding-left: 135px;
+    margin: 0 0 72px;
+    padding-left: 196px;
+
+    @include max(lg) {
+      padding-left: 0;
+    }
+
+    @include max(md) {
+      margin-bottom: 60px;
+    }
   }
 
   &__wrapper {
+    position: relative;
     background-color: $asphalt-c9;
 
-    .container {
-      position: relative;
-      display: flex;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
 
-      &::before {
-        content: "";
-        display: block;
+      width: 25%;
+      height: 100%;
+      //margin-left: -75px;
+      flex-shrink: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../images/brands-bg.jpg");
 
-        width: 485px;
-        margin-left: -75px;
-        flex-shrink: 0;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url("../images/brands-bg.jpg");
+      @include max(lg) {
+        width: calc(100% / 3);
       }
+
+      @include max(md) {
+        display: none;
+      }
+    }
+
+    .container {
+      //position: relative;
+      display: flex;
     }
   }
 
@@ -31,7 +52,18 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: -32px !important;
+    width: 75%;
+    margin-left: auto !important; //25%;
     padding: 116px 0 !important;
+
+    @include max(lg) {
+      width: calc((100% / 3) * 2);
+    }
+
+    @include max(md) {
+      width: 100%;
+      padding: 60px 0 !important;
+    }
   }
 
   &__item {
@@ -42,6 +74,22 @@
     height: 100px;
     margin-top: 32px;
     justify-content: center;
+
+    @include max(1440) {
+      max-width: calc(100% / 6);
+    }
+
+    @include max(sm) {
+      max-width: 25%;
+    }
+
+    @include max(480) {
+      max-width: calc(100% / 3);
+    }
+
+    @include max(xxs) {
+      max-width: 50%;
+    }
 
     a {
       align-self: center;
@@ -68,6 +116,18 @@
 
     &-item {
       width: 25%;
+
+      @include max(lg) {
+        width: calc(100% / 3);
+      }
+
+      @include max(md) {
+        width: 50%;
+      }
+
+      @include max(640) {
+        width: 100%;
+      }
     }
   }
 }

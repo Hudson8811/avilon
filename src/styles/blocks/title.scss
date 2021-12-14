@@ -7,6 +7,14 @@
   color: $asphalt-92;
 
   @include max(md) {
+    //font-size: 56px;
+  }
+
+  @include max(md) {
     font-size: 56px;
+  }
+
+  @include max(xs) {
+    font-size: 48px;
   }
 }

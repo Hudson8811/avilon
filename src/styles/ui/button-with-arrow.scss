@@ -1,6 +1,6 @@
 .button-with-arrow {
   $self: &;
-  display: inline-flex;
+  display: flex;
   padding: 26px 57px;
 
   border: none;
@@ -18,6 +18,21 @@
     }
   }
 
+  &--outline-light {
+    box-shadow: inset 0 0 0 1px $grey-75;
+    background-color: transparent;
+    transition: box-shadow $transition;
+
+    @include hover {
+      background-color: transparent;
+      box-shadow: inset 0 0 0 1px $white;
+    }
+  }
+
+  @include max(xs) {
+    padding: 21px 46px;
+  }
+
   &:active {
     opacity: 0.7;
   }
@@ -28,6 +43,11 @@
     color: $white;
     letter-spacing: 0.1em;
     align-self: center;
+    transition: color $transition;
+
+    @include max(xs) {
+      font-size: 16px;
+    }
   }
 
   &__icon {
@@ -38,11 +58,18 @@
 
     transition: transform $transition;
 
+    @include max(xs) {
+      width: 22px;
+      margin-left: 13px;
+      margin-top: 2px;
+    }
+
     svg {
       display: block;
       width: 100%;
       height: auto;
       fill: $white;
+      transition: fill $transition;
     }
   }
 }

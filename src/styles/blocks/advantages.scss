@@ -1,18 +1,38 @@
 .advantages {
-  padding: 60px 0;
-
-  &__header {
-    padding: 70px 0;
-  }
+  padding: 280px 0 130px;
 
   &__title {
+    //width: 50%;
+    margin-bottom: 60px;
+    padding: 70px 0;
+    //background-color: $light-f1;
+
+    @include max(1440) {
+      padding: 50px 0;
+    }
+
+    @include max(md) {
+      padding: 70px 0 20px;
+    }
+
+    @include max(sm) {
+      padding: 40px 0 0;
+    }
   }
 
   &__main {
-    padding-bottom: 327px;
+    padding-bottom: 140px; //327px;;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../images/advantages-bg.jpg");
+
+    @include max(1440) {
+      padding-bottom: 240px;
+    }
+
+    @include max(xs) {
+      padding-bottom: 200px;
+    }
 
     .container {
       position: relative;
@@ -24,23 +44,79 @@
   &__wrapper {
     width: 50%;
     margin-top: -220px;
-    padding: 130px 133px 153px;
-    //margin-left: auto;
+    padding: 14px 133px 210px;
     background-color: $light-f1;
-    //transform: translateY(-220px);
-    align-self: flex-end;
+    align-self: flex-start;
+
+    @include max(xxl) {
+      margin-top: vw(-220);
+      padding: vw(14) vw(133) vw(210);
+    }
+
+    @include max(1440) {
+      width: 100%;
+      margin-top: -200px;
+      padding: 0 24px 60px;
+    }
+
+    @include max(md) {
+      padding: 0 60px 80px;
+    }
+
+    @include max(sm) {
+      padding: 0 20px 80px;
+    }
+
+    @include max(xs) {
+      padding: 0 12px 40px;
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: -80px !important;
+    margin-top: -87px !important;
+
+    @include max(md) {
+      margin-top: -60px !important;
+    }
+
+    @include max(xs) {
+      justify-content: center;
+      margin-top: -40px !important;
+    }
+
+    @include max(xxs) {
+      //justify-content: center;
+      //margin-top: -40px !important;
+    }
   }
 
   &__item {
-    width: 248px;
-    margin-top: 80px;
+    width: 100%;
+    max-width: 248px;
+    margin-top: 87px;
+
+    @include max(1440) {
+      width: calc(100% / 6);
+      max-width: none;
+      margin-top: 60px;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    @include max(md) {
+      width: calc(100% / 3);
+      max-width: 248px;
+      margin-top: 60px;
+    }
+
+    @include max(xs) {
+      width: 50%;
+      max-width: 220px;
+      margin-top: 40px;
+    }
   }
 
   &__bottom {
@@ -50,24 +126,61 @@
 
   &__video {
     position: absolute;
-    left: 15px;
-    bottom: 0;
+    right: 15px;
+    bottom: -123px;
     width: calc(50% - 15px);
     //margin-bottom: -310px;
     align-self: flex-start;
-    transform: translateY(100%);
+    transform: translateY(50%);
+
+    @include max(1440) {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 885px;
+      margin: 100px auto 0;
+      transform: translateY(0);
+    }
+
+    @include max(md) {
+      margin-top: 100px;
+    }
+    @include max(xs) {
+      margin-top: 60px;
+    }
   }
 
   &__text {
     max-width: 750px;
-    margin-left: auto;
-    margin-right: 58px;
+    //margin-left: auto;
+    margin-right: 0;
     padding: 76px 0;
     //height: 290px;
 
     font-size: 20px;
     color: $grey-95;
     //background-color: rgba(yellow, 0.4);
+
+    @include max(1440) {
+      max-width: 850px;
+      margin-top: -140px;
+      padding: 56px 48px 0;
+      background-color: $white;
+    }
+
+    @include max(md) {
+      margin-right: auto;
+    }
+
+    @include max(xs) {
+      padding: 48px 30px 0;
+    }
+
+    @include max(xxs) {
+      padding: 40px 24px 0;
+      font-size: 18px;
+    }
 
     p {
       margin: 0;
