@@ -1,6 +1,6 @@
 //= ./../../node_modules/jquery/dist/jquery.min.js
 
-
+//= ./libs/aos.js
 //= ./libs/simplebar.js
 //= ./libs/choices.min.js
 //= ./libs/swiper-bundle.min.js

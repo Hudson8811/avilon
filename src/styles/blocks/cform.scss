@@ -7,13 +7,37 @@
   &__grid {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     margin-left: -42px;
     margin-top: -48px;
+
+    @include max(sm) {
+      margin-left: 0;
+    }
 
     #{$self}__field {
       margin-left: 42px;
       margin-top: 48px;
+
+      @include max(sm) {
+        margin-left: 0;
+        margin-top: 32px;
+      }
+
+      &--half {
+        width: calc(50% - 42px);
+
+        @include max(sm) {
+          width: 100%;
+        }
+      }
+    }
+
+    #{$self}__file {
+      margin-left: 42px;
+
+      @include max(sm) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -22,24 +46,38 @@
 
     & + & {
       margin-top: 48px;
-    }
 
-    &--half {
-      width: calc(50% - 42px);
+      @include max(sm) {
+        margin-top: 32px;
+      }
     }
   }
 
   &__file {
     margin-top: 52px;
     margin-bottom: 52px;
+
+    @include max(sm) {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
   }
 
   &__consent {
+    margin-top: 48px;
     max-width: 500px;
+
+    @include max(sm) {
+      margin-top: 32px;
+    }
   }
 
   &__send {
     margin: 80px 0 0;
+
+    @include max(sm) {
+      margin-top: 50px;
+    }
 
     &--center {
       margin-left: auto;

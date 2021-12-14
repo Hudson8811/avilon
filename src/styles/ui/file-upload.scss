@@ -5,7 +5,7 @@
   display: flex;
   width: 100%;
 
-  padding: 0 0 21px;
+  padding: 0 48px 21px 0;
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -17,6 +17,7 @@
   cursor: pointer;
 
   @include max(xs) {
+    padding-right: 40px;
     font-size: 16px;
   }
 

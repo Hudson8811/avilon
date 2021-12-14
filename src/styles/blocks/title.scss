@@ -17,4 +17,8 @@
   @include max(xs) {
     font-size: 48px;
   }
+
+  @include max(xxs) {
+    font-size: 40px;
+  }
 }

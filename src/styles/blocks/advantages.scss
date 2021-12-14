@@ -1,6 +1,11 @@
 .advantages {
   padding: 280px 0 130px;
 
+  @include max(md) {
+    padding-top: 220px;
+    padding-bottom: 60px;
+  }
+
   &__title {
     //width: 50%;
     margin-bottom: 60px;

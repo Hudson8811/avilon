@@ -2,10 +2,11 @@ section.vacancies
   header.vacancies__header
     .container
       .vacancies__header-content
-        h2.vacancies__title.title Вакансии
-        .vacancies__short Выбирайте из более чем 300 открытых вакансий по 40 различным направлениям. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        h2.vacancies__title.title(data-aos="fade-up") Вакансии
+        .vacancies__short(data-aos="fade-up") Выбирайте из более чем 300 открытых вакансий по 40 различным направлениям. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+      span.bg(data-aos="fade-left")
     
-  .vacancies__wrapper
+  .vacancies__wrapper(data-aos="fade-up")
     .container
       .vacancies__aside
         +scroll-btn('up', 'vacancies__aside-scroll-btn vacancies__aside-scroll-btn--up')

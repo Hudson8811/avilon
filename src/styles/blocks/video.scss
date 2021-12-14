@@ -19,6 +19,13 @@
     background-repeat: no-repeat;
     background-position: cover;
     background-image: url("../images/poster.jpg");
+    background-color: $dark-37;
+    transition: opacity $transition;
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   &__play {

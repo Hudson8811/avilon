@@ -1,8 +1,8 @@
 section.awards
   .awards__container.container
-    h2.awards__title.title Награды и достижения
+    h2.awards__title.title(data-aos="fade-up") Награды и достижения
 
-    .awards__years.swiper.__js_years-carousel
+    .awards__years.swiper.__js_years-carousel(data-aos="fade-up")
       .swiper-wrapper
         each item, index in YEARS
           .awards__year.swiper-slide(data-target="#" +  item.targetSelector)
@@ -15,7 +15,7 @@ section.awards
           +icon('arrow-right')(width="18", height="32")
           span.visually-hidden Следующий
     
-    .awards__wrapper.inactive
+    .awards__wrapper.inactive(data-aos="fade-up")
       each item, index in YEARS
         .awards__carousel
           .swiper.__js_awards-carousel(id= item.targetSelector)

@@ -15,9 +15,9 @@
       </div>
     </header>
     <main class="main">
-      <section class="hero"> 
+      <section class="hero">
         <div class="hero__container container"> 
-          <div class="hero__column hero__column--main"> 
+          <div class="hero__column hero__column--main" data-aos="fade-right">
             <h1 class="hero__title title">Приглашаем на работу в&nbsp;Авилон!</h1>
             <ul class="hero__list">
               <li>Автобизнес</li>
@@ -30,8 +30,12 @@
             </ul>
           </div>
           <div class="hero__column hero__column--aside">
-            <div class="hero__image"> <img src="images/hero-image.jpg" width="1434" height="900" alt=""></div>
-            <div class="hero__text">ГК «АВИЛОН» — один из лидирующих многопрофильных холдингов России, что подтверждает большое количество наград, которыми удостоен ГК «АВИЛОН».</div>
+            <div class="hero__video" data-aos="fade-left">
+              <video autoplay mute loop>
+                <source src="video/_vars-video-main__video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="hero__text" data-aos="fade-up">ГК «АВИЛОН» — один из лидирующих многопрофильных холдингов России, что подтверждает большое количество наград, которыми удостоен ГК «АВИЛОН».</div>
           </div>
         </div>
       </section>
@@ -39,12 +43,12 @@
         <header class="vacancies__header">
           <div class="container">
             <div class="vacancies__header-content">
-              <h2 class="vacancies__title title">Вакансии</h2>
-              <div class="vacancies__short">Выбирайте из более чем 300 открытых вакансий по 40 различным направлениям. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
-            </div>
+              <h2 class="vacancies__title title" data-aos="fade-up">Вакансии</h2>
+              <div class="vacancies__short" data-aos="fade-up">Выбирайте из более чем 300 открытых вакансий по 40 различным направлениям. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</div>
+            </div><span class="bg" data-aos="fade-left"></span>
           </div>
         </header>
-        <div class="vacancies__wrapper">
+        <div class="vacancies__wrapper" data-aos="fade-up">
           <div class="container">
             <div class="vacancies__aside">
               <button class="vacancies__aside-scroll-btn vacancies__aside-scroll-btn--up scroll-btn scroll-btn--up" type="button"><span class="visually-hidden">Вверх</span>
@@ -191,6 +195,17 @@
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
                       </svg></span>
                   </li>
+                  <li class="vacancies__item vacancy-preview" data-category="auto-business">
+                    <div class="vacancy-preview__title">Водитель-экспедитор</div>
+                    <div class="vacancy-preview__text">165 000 руб, Москва</div>
+                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
+                    <div class="vacancy-preview__action"> 
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель-экспедитор">Подробнее</button>
+                    </div><span class="vacancy-preview__icon"> 
+                      <svg width="11" height="11">
+                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
+                      </svg></span>
+                  </li>
                   <li class="vacancies__item four vacancy-preview" data-category="auto-business">
                     <div class="vacancy-preview__title">Водитель на газель</div>
                     <div class="vacancy-preview__text">135 000 – 170 000 руб, Москва</div>
@@ -202,6 +217,17 @@
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
                       </svg></span>
                   </li>
+                  <li class="vacancies__item vacancy-preview" data-category="auto-business">
+                    <div class="vacancy-preview__title">Водитель с личным грузовым автомобилем</div>
+                    <div class="vacancy-preview__text">20 000 – 170 000 руб, Москва</div>
+                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
+                    <div class="vacancy-preview__action"> 
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель с личным грузовым автомобилем">Подробнее</button>
+                    </div><span class="vacancy-preview__icon"> 
+                      <svg width="11" height="11">
+                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
+                      </svg></span>
+                  </li>
                   <li class="vacancies__item four vacancy-preview" data-category="auto-business">
                     <div class="vacancy-preview__title">Водитель на газель</div>
                     <div class="vacancy-preview__text">135 000 – 170 000 руб, Москва</div>
@@ -213,34 +239,12 @@
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
                       </svg></span>
                   </li>
-                  <li class="vacancies__item vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Семейный водитель</div>
-                    <div class="vacancy-preview__text">20 000 – 150 000 руб, Москва</div>
+                  <li class="vacancies__item one vacancy-preview" data-category="auto-business">
+                    <div class="vacancy-preview__title">Старший менеджер отдела продаж VOLVO</div>
+                    <div class="vacancy-preview__text">150 000 – 250 000 руб, Москва</div>
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Семейный водитель">Подробнее</button>
-                    </div><span class="vacancy-preview__icon"> 
-                      <svg width="11" height="11">
-                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
-                      </svg></span>
-                  </li>
-                  <li class="vacancies__item vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Водитель электропогрузчика</div>
-                    <div class="vacancy-preview__text">90 000 руб, Москва</div>
-                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
-                    <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель электропогрузчика">Подробнее</button>
-                    </div><span class="vacancy-preview__icon"> 
-                      <svg width="11" height="11">
-                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
-                      </svg></span>
-                  </li>
-                  <li class="vacancies__item vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Семейный водитель</div>
-                    <div class="vacancy-preview__text">20 000 – 150 000 руб, Москва</div>
-                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
-                    <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Семейный водитель">Подробнее</button>
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Старший менеджер отдела продаж VOLVO">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
@@ -258,33 +262,22 @@
                       </svg></span>
                   </li>
                   <li class="vacancies__item vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Водитель категории Е</div>
-                    <div class="vacancy-preview__text">до 160 000 руб, Москва</div>
+                    <div class="vacancy-preview__title">Водитель электропогрузчика</div>
+                    <div class="vacancy-preview__text">90 000 руб, Москва</div>
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель категории Е">Подробнее</button>
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель электропогрузчика">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
                       </svg></span>
                   </li>
                   <li class="vacancies__item vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Старший менеджер отдела продаж VOLVO</div>
-                    <div class="vacancy-preview__text">150 000 – 250 000 руб, Москва</div>
+                    <div class="vacancy-preview__title">Водитель-экспедитор</div>
+                    <div class="vacancy-preview__text">165 000 руб, Москва</div>
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Старший менеджер отдела продаж VOLVO">Подробнее</button>
-                    </div><span class="vacancy-preview__icon"> 
-                      <svg width="11" height="11">
-                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
-                      </svg></span>
-                  </li>
-                  <li class="vacancies__item four vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Водитель на газель</div>
-                    <div class="vacancy-preview__text">135 000 – 170 000 руб, Москва</div>
-                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
-                    <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель на газель">Подробнее</button>
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель-экспедитор">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
@@ -313,11 +306,22 @@
                       </svg></span>
                   </li>
                   <li class="vacancies__item vacancy-preview" data-category="auto-business">
-                    <div class="vacancy-preview__title">Водитель электропогрузчика</div>
-                    <div class="vacancy-preview__text">90 000 руб, Москва</div>
+                    <div class="vacancy-preview__title">Семейный водитель</div>
+                    <div class="vacancy-preview__text">20 000 – 150 000 руб, Москва</div>
                     <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
                     <div class="vacancy-preview__action"> 
-                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Водитель электропогрузчика">Подробнее</button>
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Семейный водитель">Подробнее</button>
+                    </div><span class="vacancy-preview__icon"> 
+                      <svg width="11" height="11">
+                        <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
+                      </svg></span>
+                  </li>
+                  <li class="vacancies__item one vacancy-preview" data-category="auto-business">
+                    <div class="vacancy-preview__title">Старший менеджер отдела продаж VOLVO</div>
+                    <div class="vacancy-preview__text">150 000 – 250 000 руб, Москва</div>
+                    <time class="vacancy-preview__date" datetime="2021-11-18">18 ноября 2021</time>
+                    <div class="vacancy-preview__action"> 
+                      <button class="vacancy-preview__more" type="button" data-vacancy-name="Старший менеджер отдела продаж VOLVO">Подробнее</button>
                     </div><span class="vacancy-preview__icon"> 
                       <svg width="11" height="11">
                         <use xlink:href="./images/sprite.svg#arrow-top-right"></use>
@@ -1344,8 +1348,8 @@
       </section>
       <section class="awards">
         <div class="awards__container container">
-          <h2 class="awards__title title">Награды и достижения</h2>
-          <div class="awards__years swiper __js_years-carousel">
+          <h2 class="awards__title title" data-aos="fade-up">Награды и достижения</h2>
+          <div class="awards__years swiper __js_years-carousel" data-aos="fade-up">
             <div class="swiper-wrapper">
               <div class="awards__year swiper-slide" data-target="#awards-2002"><span>2002</span></div>
               <div class="awards__year swiper-slide" data-target="#awards-2003"><span>2003</span></div>
@@ -1368,7 +1372,7 @@
               </button>
             </div>
           </div>
-          <div class="awards__wrapper inactive">
+          <div class="awards__wrapper inactive" data-aos="fade-up">
             <div class="awards__carousel">
               <div class="swiper __js_awards-carousel" id="awards-2002">
                 <div class="swiper-wrapper"> 
@@ -1788,10 +1792,10 @@
       <section class="advantages">
         <div class="advantages__main">
           <div class="container">
-            <div class="advantages__wrapper">
-              <h2 class="advantages__title title">Преимущества</h2>
+            <div class="advantages__wrapper" data-aos="fade-up">
+              <h2 class="advantages__title title" data-aos="fade-up">Преимущества</h2>
               <ul class="advantages__list">
-                <li class="advantages__item advantage">
+                <li class="advantages__item advantage" data-aos="fade-up">
                   <div class="advantage__icon">
                     <svg width="78" height="76">
                       <use xlink:href="./images/sprite.svg#advantage-icon-1"></use>
@@ -1799,7 +1803,7 @@
                   </div>
                   <div class="advantage__text">Работа в команде единомышленников</div>
                 </li>
-                <li class="advantages__item advantage">
+                <li class="advantages__item advantage" data-aos="fade-up">
                   <div class="advantage__icon">
                     <svg width="104" height="70">
                       <use xlink:href="./images/sprite.svg#advantage-icon-2"></use>
@@ -1807,7 +1811,7 @@
                   </div>
                   <div class="advantage__text">Обучение</div>
                 </li>
-                <li class="advantages__item advantage">
+                <li class="advantages__item advantage" data-aos="fade-up">
                   <div class="advantage__icon">
                     <svg width="69" height="82">
                       <use xlink:href="./images/sprite.svg#advantage-icon-3"></use>
@@ -1815,7 +1819,7 @@
                   </div>
                   <div class="advantage__text">Социальные гарантии</div>
                 </li>
-                <li class="advantages__item advantage">
+                <li class="advantages__item advantage" data-aos="fade-up">
                   <div class="advantage__icon">
                     <svg width="66" height="67">
                       <use xlink:href="./images/sprite.svg#advantage-icon-4"></use>
@@ -1823,7 +1827,7 @@
                   </div>
                   <div class="advantage__text">Корпоративные мероприятия</div>
                 </li>
-                <li class="advantages__item advantage">
+                <li class="advantages__item advantage" data-aos="fade-up">
                   <div class="advantage__icon">
                     <svg width="78" height="74">
                       <use xlink:href="./images/sprite.svg#advantage-icon-5"></use>
@@ -1831,7 +1835,7 @@
                   </div>
                   <div class="advantage__text">Карьерный рост</div>
                 </li>
-                <li class="advantages__item advantage">
+                <li class="advantages__item advantage" data-aos="fade-up">
                   <div class="advantage__icon">
                     <svg width="93" height="92">
                       <use xlink:href="./images/sprite.svg#advantage-icon-6"></use>
@@ -1851,13 +1855,13 @@
                   </button>
                 </div>
                 <video preload>
-                  <source src="video/_vars-video-main__video.mp4" type="video/mp4">
+                  <source src="video/avilon-job.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
           </div>
         </div>
-        <div class="advantages__bottom">
+        <div class="advantages__bottom" data-aos="fade-up">
           <div class="container">
             <div class="advantages__text">
               <p>Работа в ГК «АВИЛОН» – это работа в современных помещениях, оснащенных новейшим оборудованием.</p>
@@ -1867,12 +1871,12 @@
         </div>
       </section>
       <section class="brands">
-        <header class="brands__header"> 
+        <header class="brands__header" data-aos="fade-up">
           <div class="container"> 
             <h2 class="brands__title title">Бренды</h2>
           </div>
         </header>
-        <div class="brands__wrapper">
+        <div class="brands__wrapper" data-aos="fade-up">
           <div class="container">
             <ul class="brands__list">
               <li class="brands__item"><a href="#"><img src="images/brands/logo/brands-logo-1.png"></a></li>
@@ -1908,14 +1912,14 @@
             </ul>
           </div>
         </div>
-        <div class="brands__businesses"><a class="brands__businesses-item business-preview business-preview--moeleto business-preview--bg-grey" href="http://moeleto.ru"><span class="business-preview__logo"><img src="images/businesses/logo-1.svg" width="200" height="100" alt=""></span><span class="business-preview__type">Агрохолдинг</span><span class="business-preview__site">moeleto.ru</span></a><a class="brands__businesses-item business-preview business-preview--jilinvest" href="http://jil-invest.ru"><span class="business-preview__logo"><img src="images/businesses/logo-2.svg" width="269" height="40" alt=""></span><span class="business-preview__type">Девелопмент</span><span class="business-preview__site">jil-invest.ru</span></a><a class="brands__businesses-item business-preview business-preview--avilonplaza business-preview--bg-grey" href="http://avilon-plaza.ru"><span class="business-preview__logo"><img src="images/businesses/logo-3.png" width="256" height="91" alt=""></span><span class="business-preview__type">Бизнес-центр</span><span class="business-preview__site">avilon-plaza.ru</span></a><a class="brands__businesses-item business-preview business-preview--autologistics" href="http://autologistics.ru"><span class="business-preview__logo"><img src="images/businesses/logo-4.svg" width="195" height="54" alt=""></span><span class="business-preview__type">Логистика </span><span class="business-preview__site">autologistics.ru</span></a><a class="brands__businesses-item business-preview business-preview--solt business-preview--bg-light" href="http://solt.msk.ru"><span class="business-preview__logo"><img src="images/businesses/logo-5.svg" width="200" height="53" alt=""></span><span class="business-preview__type">Управление автопарками</span><span class="business-preview__site">solt.msk.ru</span></a><a class="brands__businesses-item business-preview business-preview--assuntamadre" href="http://assuntamadre.ru"><span class="business-preview__logo"><img src="images/businesses/logo-6.svg" width="200" height="87" alt=""></span><span class="business-preview__type">Ресторан</span><span class="business-preview__site">assuntamadre.ru</span></a>
+        <div class="brands__businesses"><a class="brands__businesses-item business-preview business-preview--moeleto business-preview--bg-grey" href="http://moeleto.ru" data-aos="fade-up"><span class="business-preview__logo"><img src="images/businesses/logo-1.svg" width="200" height="100" alt=""></span><span class="business-preview__type">Агрохолдинг</span><span class="business-preview__site">moeleto.ru</span></a><a class="brands__businesses-item business-preview business-preview--jilinvest" href="http://jil-invest.ru" data-aos="fade-up"><span class="business-preview__logo"><img src="images/businesses/logo-2.svg" width="269" height="40" alt=""></span><span class="business-preview__type">Девелопмент</span><span class="business-preview__site">jil-invest.ru</span></a><a class="brands__businesses-item business-preview business-preview--avilonplaza business-preview--bg-grey" href="http://avilon-plaza.ru" data-aos="fade-up"><span class="business-preview__logo"><img src="images/businesses/logo-3.png" width="256" height="91" alt=""></span><span class="business-preview__type">Бизнес-центр</span><span class="business-preview__site">avilon-plaza.ru</span></a><a class="brands__businesses-item business-preview business-preview--autologistics" href="http://autologistics.ru" data-aos="fade-up"><span class="business-preview__logo"><img src="images/businesses/logo-4.svg" width="195" height="54" alt=""></span><span class="business-preview__type">Логистика </span><span class="business-preview__site">autologistics.ru</span></a><a class="brands__businesses-item business-preview business-preview--solt business-preview--bg-light" href="http://solt.msk.ru" data-aos="fade-up"><span class="business-preview__logo"><img src="images/businesses/logo-5.svg" width="200" height="53" alt=""></span><span class="business-preview__type">Управление автопарками</span><span class="business-preview__site">solt.msk.ru</span></a><a class="brands__businesses-item business-preview business-preview--assuntamadre" href="http://assuntamadre.ru" data-aos="fade-up"><span class="business-preview__logo"><img src="images/businesses/logo-6.svg" width="200" height="87" alt=""></span><span class="business-preview__type">Ресторан</span><span class="business-preview__site">assuntamadre.ru</span></a>
         </div>
       </section>
       <section class="contact">
         <div class="container">
-          <div class="contact__note">Не нашли подходящую вакансию? <br>Свяжитесь с нами!</div>
+          <div class="contact__note" data-aos="fade-up">Не нашли подходящую вакансию? <br>Свяжитесь с нами!</div>
         </div>
-        <div class="contact__wrapper">
+        <div class="contact__wrapper" data-aos="fade-up">
           <div class="container"> 
             <!-- ::before-->
             <div class="contact__form cform">
@@ -1961,44 +1965,52 @@
     <section class="response-vacancy" style="display: none;">
       <header class="response-vacancy__header">
         <h2 class="response-vacancy__title">Отклик на вакансию:<span class="response-vacancy__vacancy-name">старший менеджер отдела продаж VOLVO</span></h2>
-        <div class="response-vacancy__form cform">
-          <form action="" method="">
-            <div class="cform__grid">
-              <label class="cform__field cform__field--half field">
-                <input type="text" name="firstname" placeholder="Имя">
-              </label>
-              <label class="cform__field cform__field--half field">
-                <input type="text" name="lastname" placeholder="Фамилия">
-              </label>
-              <label class="cform__field cform__field--half field">
-                <input type="text" name="patronymic" placeholder="Отчество">
-              </label>
-              <label class="cform__field cform__field--half field">
-                <input type="text" name="dateOfBirth" placeholder="Дата рождения">
-              </label>
-              <label class="cform__field cform__field--half field">
-                <input type="email" name="email" placeholder="Email">
-              </label>
-              <label class="cform__field cform__field--half field">
-                <input type="tel" name="phone" placeholder="Номер телефона">
-              </label>
-              <label class="cform__file file-upload">
-                <input class="visually-hidden" type="file" name="cvFile"><span class="file-upload__text">Прикрепить резюме</span>
-              </label>
-              <label class="cform__field field field--textarea">
-                <textarea name="message" placeholder="Расскажите, почему хотите работать у нас"></textarea>
-              </label>
-              <label class="cform__consent custom-checkbox">
-                <input class="visually-hidden" type="checkbox" name="consent" value="Даю cогласие на обработку персональных данных, а так же, на включение моей анкеты в базу кандидатов"><span class="custom-checkbox__text">Даю cогласие на обработку персональных данных, а так же, на включение моей анкеты в базу кандидатов</span>
-              </label>
-            </div>
-            <button class="cform__send button-with-arrow--outline-white button-with-arrow" type="submit"><span class="button-with-arrow__text">Отправить заявку</span><span class="button-with-arrow__icon"> 
-                <svg width="30" height="16">
-                  <use xlink:href="./images/sprite.svg#long-arrow-right"></use>
-                </svg></span></button>
-          </form>
-        </div>
+        <button class="response-vacancy__close" type="button">
+          <svg width="32" height="32">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
       </header>
+      <div class="response-vacancy__form cform">
+        <form action="" method="">
+          <div class="cform__grid">
+            <label class="cform__field cform__field--half field">
+              <input type="text" name="firstname" placeholder="Имя">
+            </label>
+            <label class="cform__field cform__field--half field">
+              <input type="text" name="lastname" placeholder="Фамилия">
+            </label>
+            <label class="cform__field cform__field--half field">
+              <input type="text" name="patronymic" placeholder="Отчество">
+            </label>
+            <label class="cform__field cform__field--half field">
+              <input type="text" name="dateOfBirth" placeholder="Дата рождения">
+            </label>
+            <label class="cform__field cform__field--half field">
+              <input type="email" name="email" placeholder="Email">
+            </label>
+            <label class="cform__field cform__field--half __js_imask field">
+              <input type="tel" name="phone" placeholder="Номер телефона">
+            </label>
+          </div>
+          <label class="cform__file file-upload">
+            <input class="visually-hidden" type="file" name="cvFile"><span class="file-upload__text">Прикрепить резюме</span><span class="file-upload__icon"> 
+              <svg width="40" height="40">
+                <use xlink:href="./images/sprite.svg#attach-file"></use>
+              </svg></span>
+          </label>
+          <label class="cform__field field field--textarea">
+            <textarea name="message" placeholder="Расскажите, почему хотите работать у нас"></textarea>
+          </label>
+          <label class="cform__consent custom-checkbox">
+            <input class="visually-hidden" type="checkbox" name="consent" value="Даю cогласие на обработку персональных данных, а так же, на включение моей анкеты в базу кандидатов"><span class="custom-checkbox__text">Даю cогласие на обработку персональных данных, а так же, на включение моей анкеты в базу кандидатов</span>
+          </label>
+          <button class="cform__send button-with-arrow--outline-light button-with-arrow" type="submit"><span class="button-with-arrow__text">Отправить заявку</span><span class="button-with-arrow__icon"> 
+              <svg width="30" height="16">
+                <use xlink:href="./images/sprite.svg#long-arrow-right"></use>
+              </svg></span></button>
+        </form>
+      </div>
     </section>
     <script src="js/main.min.js"></script>
   </body>

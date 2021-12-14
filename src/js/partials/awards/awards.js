@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
       const awardsWrapper = document.querySelector('.awards__wrapper');
 
       const yearsCarousel = new Swiper(yearsCarouselEl, {
-        slidesPerView: 3,
+        slidesPerView: 1,
         speed: 300,
         spaceBetween: 0,
         centeredSlides: true,
@@ -25,19 +25,16 @@ window.addEventListener('load', () => {
         },
 
         breakpoints: {
-          // when window width is >= 320px
+          375: {
+            slidesPerView: 3
+          },
           860: {
             slidesPerView: 5
           },
-          // when window width is >= 480px
           1280: {
             slidesPerView: 7
-          },
-          // when window width is >= 640px
-          /*1800: {
-            slidesPerView: 7
+          }
           
-          }*/
         },
 
         on: {

@@ -100,6 +100,24 @@
     }
   }
 
+  &__video {
+    width: calc(100% + 75px);
+
+    @include max(lg) {
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      //background-color: $light-e1;
+      //box-shadow: -50vw 0 0 0 $light-e1, 50vw 0 0 0 $light-e1;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: auto;
+    }
+  }
+
   &__column {
     &--main {
       width: 410px;

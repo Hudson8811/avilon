@@ -1,9 +1,9 @@
 section.brands
-  header.brands__header 
+  header.brands__header(data-aos="fade-up")
     .container 
       h2.brands__title.title Бренды
 
-  .brands__wrapper
+  .brands__wrapper(data-aos="fade-up")
     .container
       ul.brands__list
         - let i = 1;
@@ -15,7 +15,7 @@ section.brands
   .brands__businesses
     
     each item in BUSINESSES
-      a.brands__businesses-item.business-preview(class= item.mod, href= item.site.url)
+      a.brands__businesses-item.business-preview(class= item.mod, href= item.site.url, data-aos="fade-up")
         span.business-preview__logo
           img(src="images/businesses/" + item.logo.n, width= item.logo.w, height= item.logo.h, alt="")
         span.business-preview__type= item.type
