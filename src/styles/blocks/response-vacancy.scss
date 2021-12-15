@@ -21,7 +21,6 @@
   }
 
   &__close {
-    display: none;
     position: absolute;
     top: 40px;
     right: 40px;
@@ -31,6 +30,7 @@
     border: none;
     appearance: none;
     cursor: pointer;
+    outline: none;
 
     svg {
       fill: $dark-4d;

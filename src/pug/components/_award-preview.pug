@@ -1,4 +1,4 @@
-mixin award-preview({title, text, image, icon, iconFormat, className})
+mixin award-preview({title, text, image, icon, iconFormat = 'svg', className})
   div(class= (className ? className + ' award-preview' : 'award-preview'))
     .award-preview__main
       .award-preview__title!= title
@@ -9,8 +9,4 @@ mixin award-preview({title, text, image, icon, iconFormat, className})
 
       .award-preview__placeholder
         span.award-preview__icon
-          if iconFormat 
-            img(src="images/awards/logo/" + icon + '.' + iconFormat, alt="")
-          else
-            +icon(icon)
-            //(width="104", height="104")
+          img(src="images/awards/logo/" + icon + '.' + iconFormat, alt="")

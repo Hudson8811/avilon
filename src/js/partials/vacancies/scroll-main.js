@@ -117,7 +117,14 @@ window.addEventListener('load', () => {
   // Показ модального окна с формой отклика на вакансию
   const showModalWithResposeForm = function(evt) {
     evt.preventDefault();
-    Fancybox.show([{ src: "#responseVacancy", type: "inline" }]);
+    Fancybox.show([{ src: "#responseVacancy", type: "inline", closeButton: false }]);
+    
+
+    const closeBtn = document.querySelector('.response-vacancy__close');
+    closeBtn.onclick = () => {
+      Fancybox.close();
+      closeBtn.blur();
+    }
   };
   
   vacancyDetailBtn.onclick = showModalWithResposeForm;
