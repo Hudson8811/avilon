@@ -58,54 +58,497 @@
     {text: 'Управление персоналом, тренинги', counter: '', target: 'control', items: []}
   ];
 
-  const data = VACANCIES_MENU.map(it => {
-    return {
-      category: it.target,
-      items: it.items
-    }
-  });
-  //console.log(data)
-
   const AWARDS_2021 = [
+    {
+      title: 'АВИЛОН <span>Ситроен</span>', 
+      text: 'Лучший дилер 2020 по продажам коммерческого транспорта!', 
+      image: 'rewards-image-137', 
+      icon: 'citroen', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>', 
+      text: 'АВИЛОН официальный дилер Hyundai «Лучший директор филиала в регионе Центральный по итогам 2020 года» директор филиала АВИЛОН Hyundai - Макарычев Дмитрий', 
+      image: 'rewards-image-134', 
+      icon: 'hyundai', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>BMW Motorrad</span>', 
+      text: 'АВИЛОН BMW Motorrad на Волгоградском проспекте – ЛУЧШИЙ ДИЛЕР MOTO в РОССИИ', 
+      image: 'rewards-image-132', 
+      icon: 'bmw-motorrad', 
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    },
     {
       title: 'АВИЛОН <span>Volkswagen</span>', 
       text: 'По итогам 2020 года дилерский центр АВИЛОН Volkswagen стал лидером по объему продаж автомобилей в Volkswagen России, и был отмечен сертификатом марки за вклад в развитие продаж автомобилей Volkswagen в 2020 году.', 
-      image: 'vw-2021', 
+      image: '', 
+      icon: 'vw', 
+      className: 'awards__item swiper-slide'
+    }
+  ];
+
+  const AWARDS_2020 = [
+    {
+      title: 'АВИЛОН <span>Rolls-Royce</span>', 
+      text: 'Удостоили звания «Лучший дилер Европы 2019 и 2020 годов».',
+      image: 'rewards-image-29',
+      icon: 'rolls-royce',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: '«Моё Лето» <span></span>',
+      text: 'Компания «Моё Лето» успешно прошла сертификацию ГОСТ',
+      image: 'rewards-image-136',
+      icon: 'moe-leto',
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '«АВИЛОН» признан лучшим автомобильным холдингом по продаже автомобилей по итогам национальной премии «Автодилер Года – 2020».', 
+      image: 'rewards-image-30', 
+      icon: 'avilon', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Rolls-Royce</span>', 
+      text: '«Rolls-Royce. АВИЛОН» стал лучшим в номинации «Организация продаж новых автомобилей» в сегменте Luxury.', 
+      image: '', 
+      icon: 'rolls-royce', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>', 
+      text: 'Лучший дилер по организации продаж Hyundai: новые автомобили. Массовый сегмент. По версии АВТОСТАТ.', 
+      image: '', 
+      icon: 'hyundai', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>', 
+      text: 'Лучший дилер в сегменте премиум в категории «Организация продаж новых автомобилей» по версии АВТОСТАТ', 
+      image: '', 
+      icon: 'mercedes-benz', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Rolls-Royce</span>', 
+      text: 'Лучший дилер в сегменте люкс в категории «Организация продаж автомобилей с пробегом» по версии АВТОСТАТ', 
+      image: 'rewards-image-34', 
+      icon: 'rolls-royce', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: '«Моё Лето» <span></span>', 
+      text: 'Компании «Моё Лето» и «Агро-Инвест» награждены в номинациях «За популяризацию здорового питания в России» и «Инновационная компания» в рамках международного инвестиционного форума «Тепличные комплексы РФ и СНГ 2019».', 
+      image: '', 
+      icon: 'moe-leto', 
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: '«Агро-Инвест» <span></span>', 
+      text: 'Компания компания «Агро-Инвест» успешно прошла сертификацию и стала первым тепличным комплексом, сертифицированным по стандарту Global GAP', 
+      image: 'rewards-image-37', 
+      icon: 'agroinvest', 
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: '«Моё Лето» <span></span>', 
+      text: '2020 март Шампиньоны «Мое Лето» успешно прошли сертификационный аудит международного стандарта качества FSSC 22000 по сертификации Global Food Safety Initiative (Глобальная инициатива по пищевой безопасности).', 
+      image: '', 
+      icon: 'moe-leto', 
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: '«Моё Лето» <span></span>', 
+      text: 'Компания «Моё Лето» первой в России получила международный сертификат QSCert', 
+      image: 'rewards-image-131', 
+      icon: 'moe-leto', 
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    }
+  ];
+
+  const AWARDS_2019 = [
+    {
+      title: 'АВИЛОН <span>Hyundai</span>', 
+      text: 'Лучший дилер по корпоративным продажам.', 
+      image: 'rewards-image-135', 
+      icon: 'hyundai', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>', 
+      text: 'Лучший дилер по организации продаж Hyundai: новые автомобили. Массовый сегмент. По версии «Автостат».', 
+      image: 'rewards-image-39', 
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Bentley Москва-Волгоградский</span>', 
+      text: 'Признан лучшим дилером марки по продажам в Европе.', 
+      image: 'rewards-image-40', 
+      icon: 'bentley', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Maserati</span>', 
+      text: 'Лучший дилер в сегменте люкс в категории «Организация продаж новых автомобилей» по версии АВТОСТАТ', 
+      image: 'rewards-image-41', 
+      icon: 'maserati', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: 'АГ «АВИЛОН» стала победителем в пятом ежегодном профессиональном рейтинге «АВТОДИЛЕР ГОДА - 2019» в номинации «Организация продаж новых автомобилей».', 
+      image: '', 
+      icon: 'avilon', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>', 
+      text: 'Лучший дилер в сегменте премиум в категории «Организация продаж новых автомобилей» по версии АВТОСТАТ', 
+      image: 'rewards-image-42', 
+      icon: 'mercedes-benz', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>', 
+      text: 'АВИЛОН официальный дилер Hyundai победитель в номинации «Лизинговая сделка года в автолизинге» первой национальной премии «Лизинговая сделка года»', 
+      image: 'rewards-image-43', 
+      icon: 'hyundai', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Rolls-Royce</span>', 
+      text: 'Лучший дилер в сегменте люкс в категории «Организация продаж автомобилей с пробегом» по версии АВТОСТАТ', 
+      image: 'rewards-image-44', 
+      icon: 'rolls-royce',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: 'Лучший холдинг по организации продаж новых автомобилей (более 20 дилерских контрактов) по версии АВТОСТАТ', 
+      image: 'rewards-image-45', 
+      icon: 'avilon', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Audi</span>', 
+      text: 'Концерн Audi признал дилерский центр «АВИЛОН.Audi» лучшим в мире и удостоил премии Urban World.', 
+      image: '', 
+      icon: 'audi',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Bentley Москва-Волгоградский</span>', 
+      text: 'Занял первое место по продажам в Европе.', 
+      image: '', 
+      icon: 'bentley', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: 'АГ «АВИЛОН» - победитель в пятом ежегодном профессиональном рейтинге «Автодилер Года 2019» в номинации «Организация продаж новых автомобилей».', 
+      image: '', 
+      icon: 'avilon', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>«Audi</span>', 
+      text: 'Признан лучшим дилером Audi в России и в Москве.', 
+      image: '', 
+      icon: 'audi', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Jaguar Land Rover</span>', 
+      text: 'Лучший дилер по продажам автомобилей с пробегом Approved.', 
+      image: '', 
+      icon: 'jaguar-land-rover', 
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '«АВИЛОН» абсолютный лидер по средней выручке на одного сотрудника. «АВИЛОН» продемонстрировал наибольший рост эффективности по итогам 2018 года, по данным АвтоБизнесРевю.', 
+      image: '', 
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>', 
+      text: 'Дилер года по продажам финансовых услуг по итогам 2018 года.', 
+      image: '', 
+      icon: 'mercedes-benz', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Volkswagen»</span>', 
+      text: 'Лучший дилер 2-х столиц по итогам 2018 года.', 
+      image: '', 
       icon: 'vw', 
       className: 'awards__item swiper-slide'
     },
     {
-      title: 'АВИЛОН <span>Mercedes</span>', 
-      text: '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.', 
-      image: 'mercedes-2021', 
-      icon: 'vw', 
-      className: 'awards__item swiper-slide'
-    },
-    {
-      title: 'АВИЛОН <span>Mercedes</span>', 
-      text: '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.', 
-      image: 'mercedes-2021', 
-      icon: 'vw', 
-      className: 'awards__item swiper-slide'
-    },
-    {
-      title: 'АВИЛОН <span>Mercedes</span>', 
-      text: '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.', 
-      image: 'mercedes-2021', 
-      icon: 'vw', 
+      title: 'АВИЛОН <span></span>', 
+      text: 'Вошел в ТОП-20 российских автохолдингов по показателю выручки по итогам 2018 года по версии Автостат. Автомобильная группа входит в рейтинг «АвтоБизнесРевю» – ТОП-10 компаний по количеству новых салонов в 2018 году.', 
+      image: '', 
+      icon: 'avilon', 
       className: 'awards__item swiper-slide'
     },
   ];
+
+  const AWARDS_2018 = [
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: 'Автомобильная группа «АВИЛОН» была признана лучшей среди автомобильных дилеров России по итогам проведения ежегодной премии «РосАвтоДилер 2018», организованной Ассоциацией «Российские Автомобильные Дилеры» (РОАД).', 
+      image: '', 
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: 'АВИЛОН занял первое место в номинации «Эффективность продаж автомобилей с пробегом», второе – в номинации «Эффективность продаж новых автомобилей» и третье место в номинации «Эффективность сервисного обслуживания».', 
+      image: '', 
+      icon: 'avilon', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Jaguar Land Rover</span>', 
+      text: 'Лучший маркетинг дилерской сети Jaguar Land Rover за 1-е полугодие 2018-19 FY.', 
+      image: '', 
+      icon: 'jaguar-land-rover', 
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: 'Самый эффективный дилерский холдинг по версии АвтоБизнесРевю.', 
+      image: '', 
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: 'АГ «АВИЛОН» стала победителем IV Ежегодного профессионального рейтинга «Автодилер Года-2018» в номинации «Организация продаж новых автомобилей».', 
+      image: '', 
+      icon: 'avilon', 
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Maserati</span>',
+      text: '«АВИЛОН. Maserati» Лучший дилер в сегменте люкс в категории «Организация продаж новых автомобилей» по версии АВТОСТАТ.',
+      image: '',
+      icon: 'maserati',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Bentley</span>',
+      text: 'Лучший дилер в сегменте люкс в номинации «Организация сервиса» по версии АВТОСТАТ.',
+      image: '',
+      icon: 'bentley',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>',
+      text: 'Лучший дилер в сегменте премиум в категории «Организация продаж новых автомобилей» по версии АВТОСТАТ.',
+      image: '', 
+      icon: 'mercedes-benz',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Rolls-Royce</span>',
+      text: 'Лучший дилер в сегменте люкс в категории «Организация продаж автомобилей с пробегом» по версии АВТОСТАТ.',
+      image: '',
+      icon: 'rolls-royce',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Bentley Москва-Волгоградский</span>',
+      text: 'Лучший дилер Европы.',
+      image: '',
+      icon: 'bentley',
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Cadillac</span>', 
+      text: 'По результатам января 2018 года первого месяца работы «АВИЛОН. Cadillac» стал лучшим дилерским центром по результатам продаж Cadillac в России.', 
+      image: '', 
+      icon: 'cadillac', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Audi</span>', 
+      text: 'АЦ Волгоградский был признан лучшим дилером по корпоративным продажам в 2018 году по результатам первой ежегодной премии в области корпоративных продаж «Audi Fleet Cup 2018».', 
+      image: '', 
+      icon: 'audi',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>',
+      text: 'Лучший дилер по корпоративным продажам.',
+      image: '',
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>',
+      text: '№1 по продаже малотоннажного транспорта.',
+      image: '',
+      icon: 'mercedes-benz',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>', 
+      text: 'Лучший маркетинговый проект 2018.', 
+      image: '', 
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: '«Автологистика-Транс» <span></span>',
+      text: '«Автологистика-Транс» получила из рук гендиректора «ДАЙМЛЕР КАМАЗ РУС» Андреаса Дойшле сертификат, подтверждающий соответствие компании стандартам, предъявляемым к сервисным центрам грузовой техники Mercedes-Benz на территории России.',
+      image: '', 
+      icon: 'als', 
+      iconFormat: 'png',
+      className: 'awards__item swiper-slide'
+    }
+  ];
+  
+  const AWARDS_2017 = [
+    {
+      title: 'АВИЛОН <span>BMW</span>', 
+      text: '«АВИЛОН. BMW» признан лучшим дилером по продажам в 2017 году.', 
+      image: '',
+      icon: 'bmw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    }
+
+  ];
+    /*{
+      title: 'АВИЛОН <span></span>', 
+      text: '', 
+      image: '', 
+      icon: '', 
+      iconFormat: '',
+      className: 'awards__item swiper-slide'
+    },*/
 
   const YEARS = [
     {year: '2002', targetSelector: 'awards-2002', awards: AWARDS_2021},
     {year: '2003', targetSelector: 'awards-2003', awards: AWARDS_2021},
     {year: '2004', targetSelector: 'awards-2004', awards: AWARDS_2021},
-    {year: '2018', targetSelector: 'awards-2018', awards: AWARDS_2021},
-    {year: '2019', targetSelector: 'awards-2019', awards: AWARDS_2021},
-    {year: '2020', targetSelector: 'awards-2020', awards: AWARDS_2021},
+    {year: '2018', targetSelector: 'awards-2018', awards: AWARDS_2018},
+    {year: '2019', targetSelector: 'awards-2019', awards: AWARDS_2019},
+    {year: '2020', targetSelector: 'awards-2020', awards: AWARDS_2020},
     {year: '2021', targetSelector: 'awards-2021', awards: AWARDS_2021},
-  ];
+  ].reverse();
 
   const HERO_LIST = [
     'Автобизнес',

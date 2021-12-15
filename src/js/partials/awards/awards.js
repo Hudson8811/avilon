@@ -53,7 +53,7 @@ window.addEventListener('load', () => {
             }
 
           },
-          /*click: function(swiper, event) {
+          click: function(swiper, event) {
             const targetSlide = event.target.closest('.swiper-slide');
 
             if (targetSlide && !targetSlide.classList.contains('swiper-slide-active')) {
@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
               swiper.slideTo(targetSlideIndex);
             }
 
-          }*/
+          }
         }
       });
 

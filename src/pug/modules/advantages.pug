@@ -1,12 +1,12 @@
 section.advantages
   .advantages__main
     .container
-      .advantages__wrapper(data-aos="fade-up")
-        h2.advantages__title.title(data-aos="fade-up") Преимущества
+      .advantages__wrapper
+        h2.advantages__title.title Преимущества
 
         ul.advantages__list
           each item in ADVANTAGES_LIST
-            li.advantages__item.advantage(data-aos="fade-up")
+            li.advantages__item.advantage
               .advantage__icon
                 +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
               .advantage__text!= item.text

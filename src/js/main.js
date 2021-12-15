@@ -9,4 +9,5 @@
 //= ./partials/vacancies/vacancies.js
 
 
+//= ./partials/init-aos.js
 
