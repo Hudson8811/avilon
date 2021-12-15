@@ -427,52 +427,323 @@
   
   const AWARDS_2017 = [
     {
-      title: 'АВИЛОН <span>BMW</span>', 
-      text: '«АВИЛОН. BMW» признан лучшим дилером по продажам в 2017 году.', 
+      title: 'АВИЛОН <span>BMW</span>',
+      text: '«АВИЛОН. BMW» признан лучшим дилером по продажам в 2017 году.',
       image: '',
       icon: 'bmw',
       className: 'awards__item swiper-slide'
     },
     {
-      title: 'АВИЛОН <span></span>', 
-      text: '', 
-      image: '', 
-      icon: '', 
+      title: 'АВИЛОН <span>BMW</span>',
+      text: 'Получил награду в сегменте GKL+ за реализацию автомобилей 7 серии.',
+      image: '',
+      icon: 'bmw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>',
+      text: 'Получил 2 премии – за организацию продаж и интернет-маркетинг в премиальном сегменте по версии аналитического агентства Автостат.',
+      image: '',
+      icon: 'mercedes-benz',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>',
+      text: 'Признан Дилером года в корпоративных продажах малотоннажного транспорта в России.',
+      image: '',
+      icon: 'mercedes-benz',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший дилер в области продаж кредитных продуктов ФОРД',
+      image: '',
+      icon: 'ford',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Bentley</span>',
+      text: 'Стал Единственным 6-тизвездочным дилером в России и завоевал награду «Лучший сервис – 2017»',
+      image: '',
+      icon: 'bentley',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Aston Martin</span>',
+      text: 'Лучший дилер в Европе по маркетингу.',
+      image: '',
+      icon: 'aston-martin',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>',
+      text: '«АВИЛОН» признан лучшим дилером по корпоративным продажам Hyundai.',
+      image: '',
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Volkswagen</span>',
+      text: 'Лучший дилер 2-х столиц.',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший Дилер по продажам коммерческого транспорта в Москве.',
+      image: '',
+      icon: 'avilon',
       iconFormat: '',
       className: 'awards__item swiper-slide'
     },
     {
-      title: 'АВИЛОН <span></span>', 
-      text: '', 
-      image: '', 
-      icon: '', 
-      iconFormat: '',
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший Дилер по продажам специальной техники в 2017 году.',
+      image: '',
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Ford</span>',
+      text: 'Лучший дилер в области продаж кредитных продуктов.',
+      image: '',
+      icon: 'ford',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший Дилер по корпоративным продажам в 2017 году.',
+      image: '',
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    }
+  ];
+
+  const AWARDS_2016 = [
+    {
+      title: 'АВИЛОН <span>BMW</span>',
+      text: 'Получил награду «Лучшего сервисного центра BMW Motorrad в 2016 году».',
+      image: 'rewards-image-77',
+      icon: 'bmw-motorrad',
+      iconFormat: 'зтп',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Volkswagen</span>',
+      text: 'Лучший автодилер 2016 года в номинации сервис.',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Volkswagen</span>', 
+      text: 'Лучший дилер по итогам продаж специальной техники в 2016 году',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Volkswagen</span>',
+      text: 'Лучший дилер по корпоративным продажам в 2016 году',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Volkswagen</span>',
+      text: 'Лучший дилер по итогам продаж в 2016 году. Москва и Россия. Коммерческие автомобили.',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Volkswagen</span>',
+      text: 'По результатам исследования, проведенного ООО «ФОЛЬКСВАГЕН Групп Рус» среди российских официальных дилеров, признан Автодилером 2016 года.',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Ford</span>',
+      text: 'Лучший дилер по итогам продаж коммерческого транспорта FORD.',
+      image: '',
+      icon: 'ford',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Rolls-Royce</span>',
+      text: 'Лучший европейский дилер 2016 года по маркетинговым активностям',
+      image: '',
+      icon: 'rolls-royce',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>', 
+      text: 'Лучший Дилер 2016 года по Сервису и Запасным частям.', 
+      image: '',
+      icon: 'mercedes-benz',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>',
+      text: 'Лучший дилер по корпоративным продажам 2016.',
+      image: '',
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Hyundai</span>',
+      text: 'Лучший дилер по обучению персонала 2016.',
+      image: '',
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Aston Martin</span>',
+      text: 'В рамках ежегодной конференции европейских дилеров завоевал награду в номинации лучший «Маркетинговый проект».',
+      image: '',
+      icon: 'aston-martin',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span>Официальный дилер Bentley</span>', 
+      text: 'Признан лучшим дилером по продаже а/м',
+      image: '',
+      icon: 'bentley',
+      className: 'awards__item swiper-slide'
+    }
+  ];
+
+  const AWARDS_2015 = [
+    {
+      title: 'АВИЛОН <span>Mercedes-Benz</span>', 
+      text: 'Признан: Дилером №1 по выполнению стандартов PPI; Лидером по продажам AMG и Maybach; Лидером по продажам ДОП в России.', 
+      image: '',
+      icon: 'mercedes-benz',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'АГ «АВИЛОН» вошел в ТОП-3 по лизингу и страхованию жизни в России и ТОП-3 по объемам закупок з/ч в России.',
+      image: '',
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший дилер по продажам Genesis в 2015 году.',
+      image: '',
+      icon: 'genesis',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший дилер по корпоративным продажам в Hyundai 2015 г.',
+      image: '',
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший маркетинговый проект Hyundai 2015 г.',
+      image: '',
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший маркетинг сервиса Hyundai 2015 г.',
+      image: '',
+      icon: 'hyundai',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший дилер Hyundai в 2015 году по версии Carpark.ru',
+      image: '',
+      icon: 'hyundai',
       className: 'awards__item swiper-slide'
     },
     {
       title: 'АВИЛОН <span></span>', 
-      text: '', 
-      image: '', 
-      icon: '', 
-      iconFormat: '',
+      text: 'Лучший дилер Volkswagen 2015 года по версии Carpark.ru',
+      image: '',
+      icon: 'vw',
       className: 'awards__item swiper-slide'
     },
     {
-      title: 'АВИЛОН <span></span>', 
-      text: '', 
-      image: '', 
-      icon: '', 
-      iconFormat: '',
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший дилер 2015 года по продажам, корпоративным продажам коммерческих автомобилей и специальной техники Volkswagen в России',
+      image: '',
+      icon: 'vw',
       className: 'awards__item swiper-slide'
     },
     {
-      title: 'АВИЛОН <span></span>', 
-      text: '', 
-      image: '', 
-      icon: '', 
-      iconFormat: '',
+      title: 'АВИЛОН <span></span>',
+      text: 'Лучший дилер Jeep в 2015 году по версии Carpark.ru',
+      image: '',
+      icon: 'jeep',
       className: 'awards__item swiper-slide'
     },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Обладатель премии Ford Chairman’s Award-2015 в категории «Продажи»',
+      image: '',
+      icon: 'ford',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'По версии независимого рейтинга, организованного автомобильным порталом Carpark.ru «АВИЛОН» награжден премией «Лучший дилер 2015»',
+      image: '',
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    },
+  ];
+
+  const AWARDS_2014 = [
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'В рамках ежегодной премии вручения дилерских наград Rolls-Royce Motor Cars, АГ «АВИЛОН» был признан самым динамично развивающимся дилером.',
+      image: '',
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Признан лучшим дилером марки Volkswagen в Москве и России.',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    }
+  ];
+
+  const AWARDS_2013 = [
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Лидер корпоративных продаж в России легковых и коммерческих автомобилей Volkswagen.',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: 'Дилер №1 в России по розничным продажам коммерческих автомобилей марки Volkswagen.',
+      image: '',
+      icon: 'vw',
+      className: 'awards__item swiper-slide'
+    },
+    {
+      title: 'АВИЛОН <span></span>',
+      text: '«АВИЛОН» входит в рейтинг 200 крупнейших российских частных компаний по версии Forbes.',
+      image: '',
+      icon: 'avilon',
+      className: 'awards__item swiper-slide'
+    }
+  ];
+  
+  const AWARDS_2012 = [
     {
       title: 'АВИЛОН <span></span>', 
       text: '', 
@@ -529,7 +800,6 @@
       iconFormat: '',
       className: 'awards__item swiper-slide'
     }
-
   ];
     /*{
       title: 'АВИЛОН <span></span>', 
@@ -544,6 +814,11 @@
     {year: '2002', targetSelector: 'awards-2002', awards: AWARDS_2021},
     {year: '2003', targetSelector: 'awards-2003', awards: AWARDS_2021},
     {year: '2004', targetSelector: 'awards-2004', awards: AWARDS_2021},
+    {year: '2013', targetSelector: 'awards-2013', awards: AWARDS_2013},
+    {year: '2014', targetSelector: 'awards-2014', awards: AWARDS_2014},
+    {year: '2015', targetSelector: 'awards-2015', awards: AWARDS_2015},
+    {year: '2016', targetSelector: 'awards-2016', awards: AWARDS_2016},
+    {year: '2017', targetSelector: 'awards-2017', awards: AWARDS_2017},
     {year: '2018', targetSelector: 'awards-2018', awards: AWARDS_2018},
     {year: '2019', targetSelector: 'awards-2019', awards: AWARDS_2019},
     {year: '2020', targetSelector: 'awards-2020', awards: AWARDS_2020},

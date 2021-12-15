@@ -1,5 +1,6 @@
 //= ./../../node_modules/jquery/dist/jquery.min.js
 
+//= ./libs/fancybox.js
 //= ./libs/aos.js
 //= ./libs/simplebar.js
 //= ./libs/choices.min.js

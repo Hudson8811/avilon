@@ -62,6 +62,7 @@ window.addEventListener('load', () => {
 
   const vacanciesMainSimplebarElement = document.querySelector('.__js_vacancies-main-simplebar');
   const vacancyDetailMain = document.querySelector('.__js_vacancy-detail-mainsimplebar');
+  const vacancyDetailBtn = document.querySelector('.vacancy-detail__btn');
 
   new SimpleBar(vacancyDetailMain);
 
@@ -113,6 +114,13 @@ window.addEventListener('load', () => {
     //console.log(scrollElement.offsetHeight, scrolledElement.offsetHeight)
   };
 
+  // Показ модального окна с формой отклика на вакансию
+  const showModalWithResposeForm = function(evt) {
+    evt.preventDefault();
+    Fancybox.show([{ src: "#responseVacancy", type: "inline" }]);
+  };
+  
+  vacancyDetailBtn.onclick = showModalWithResposeForm;
 
 
     if (html.clientWidth >= 1080) {
@@ -135,7 +143,6 @@ window.addEventListener('load', () => {
     refreshVars();
     checkMainScrollNeed();
     checkAsideScrollNeed();
-    
 
 
   scrollAsideBtnUp.onclick = () => {
@@ -215,6 +222,7 @@ window.addEventListener('load', () => {
         event.preventDefault();
         $('.vacancy-detail').removeClass('opened');
     });
+
     $(document).on('click touch','.js-response', function (){
         event.preventDefault();
         showResposeModal();
