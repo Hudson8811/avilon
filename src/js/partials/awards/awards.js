@@ -18,6 +18,7 @@ window.addEventListener('load', () => {
         spaceBetween: 0,
         centeredSlides: true,
         loop: true,
+        slideToClickedSlide: true,
 
         navigation: {
           nextEl: yearsCarouselEl.parentElement.querySelector('.arrow-btn--next'),
@@ -53,15 +54,13 @@ window.addEventListener('load', () => {
             }
 
           },
-          click: function(swiper, event) {
-            const targetSlide = event.target.closest('.swiper-slide');
-
-            if (targetSlide && !targetSlide.classList.contains('swiper-slide-active')) {
-              const targetSlideIndex = parseInt(targetSlide.dataset.swiperSlideIndex, 10);
-              swiper.slideTo(targetSlideIndex);
-            }
-
-          }
+            /*click: function(swiper, event) {
+              const targetSlide = event.target.closest('.swiper-slide');
+              if (targetSlide && !targetSlide.classList.contains('swiper-slide-active')) {
+                const targetSlideIndex = parseInt(targetSlide.dataset.swiperSlideIndex, 10);
+                swiper.slideTo(targetSlideIndex);
+              }
+          }*/
         }
       });
 

@@ -244,6 +244,7 @@ window.addEventListener('load', () => {
                 $('.vacancy-detail__requirements').html(data.requirements);
                 $('.vacancy-detail__conditions').html(data.conditions);
                 $('.response-vacancy [name="id"]').val(id);
+                $('.response-vacancy__vacancy-name').text(data.name);
                 $('.vacancy-detail').addClass('opened');
                 setTimeout(function (){
                     ajaxAllow = true;
