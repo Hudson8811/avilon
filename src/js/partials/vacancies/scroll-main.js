@@ -118,7 +118,7 @@ window.addEventListener('load', () => {
   // Показ модального окна с формой отклика на вакансию
   const showModalWithResposeForm = function(evt) {
     evt.preventDefault();
-    Fancybox.show([{ src: "#responseVacancy", type: "html", closeButton: false, autoFocus: false, trapFocus: false}]);
+    Fancybox.show([{ src: "#responseVacancy", type: "inline", closeButton: false, autoFocus: false, trapFocus: false}]);
 
     const closeBtn = document.querySelector('.response-vacancy__close');
     closeBtn.blur();
@@ -226,6 +226,7 @@ window.addEventListener('load', () => {
                     refreshVars();
                     checkMainScrollNeed();
                     checkAsideScrollNeed();
+                    AOS.refresh();
                 },300);
             },
             error : function (){
@@ -250,7 +251,7 @@ window.addEventListener('load', () => {
 
     $(document).on('click touch','.js-response', function (){
         event.preventDefault();
-        showResposeModal();
+        //showResposeModal();
     });
 
     function getVacancy(id){
@@ -285,7 +286,8 @@ window.addEventListener('load', () => {
         $('.response-vacancy').show();
     }
     function hideResposeModal(){
-        $('.response-vacancy').hide();
+        //$('.response-vacancy').hide();
+        Fancybox.close();
     }
 
     $(document).on('submit', '.response-form',function (){
