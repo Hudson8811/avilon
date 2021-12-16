@@ -33,7 +33,7 @@
     //background-image: url("../images/advantages-bg.jpg");
 
     @include max(1440) {
-      padding-bottom: 240px;
+      padding-bottom: 60px;
     }
 
     @include max(md) {
@@ -169,7 +169,7 @@
       bottom: 0;
       width: 100%;
       max-width: 885px;
-      margin: 100px auto 0;
+      margin: 270px auto 0;
       transform: translateY(0);
     }
 
@@ -218,4 +218,7 @@
       margin-top: 1.6em;
     }
   }
+}
+[data-aos='fade-in'].aos-animate{
+	transform: none !important;
 }

@@ -187,7 +187,10 @@ window.addEventListener('load', () => {
   };
 
 
-    var choices = new Choices('.__js_choice');
+    var choices = new Choices('.__js_choice',{
+        searchEnabled : false,
+        searchChoices: false
+    });
 
     var ajaxAllow = true;
     $(document).on('click touch','.vacancies__menu-item a', function (){

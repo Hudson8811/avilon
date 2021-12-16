@@ -262,7 +262,7 @@
     @include max(md) {
       width: 100%;
       padding: 60px 0;
-	    min-height: 300px;
+	    min-height: 150px;
     }
 
     &-scroll-wrapper {
@@ -371,4 +371,9 @@
       opacity: 1;
     }
   }
+
+
+	.choices__list--dropdown .choices__list{
+		max-height: 195px;
+	}
 }
