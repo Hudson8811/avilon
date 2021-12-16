@@ -1,9 +1,13 @@
-mixin field({type, name, hint, className})
+mixin field({type, name, hint, className, readonly})
   if type === 'textarea'
     label(class= (className ? className + ' field field--textarea' : 'field field--textarea'))
       textarea(name= name, placeholder= hint)
       //-span.field__hint= hint
   else
     label(class= (className ? className + ' field' : 'field'))
-      input(type= type, name= name, placeholder= hint)
+      if readonly
+        input(type= type, name= name, placeholder= hint, readonly)
+      else
+        input(type= type, name= name, placeholder= hint)
+      
       //-span.field__hint= hint

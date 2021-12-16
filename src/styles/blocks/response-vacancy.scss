@@ -30,7 +30,7 @@
     border: none;
     appearance: none;
     cursor: pointer;
-    outline: none;
+    outline: none !important;
 
     svg {
       fill: $dark-4d;

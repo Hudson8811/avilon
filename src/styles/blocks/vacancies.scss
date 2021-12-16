@@ -188,6 +188,10 @@
       @include min(md) {
         display: none;
       }
+
+      .choices__list--dropdown {
+        word-break: normal;
+      }
     }
   }
 

@@ -1,6 +1,6 @@
-const dateField = document.querySelector('.__js_date-field input')
+const dateFields = document.querySelectorAll('.__js_date-field input')
 
-if (dateField) {
+if (dateFields.length) {
   const setHandler = () => {
     const next = document.querySelector('.datepicker__next');const prev = document.querySelector('.datepicker__prev');
 
@@ -8,12 +8,20 @@ if (dateField) {
     prev.onclick = (e) => e.preventDefault();
   }
 
-  const datepicker = new Datepicker(dateField, {
-    onRender: () => {
-      setHandler();
-    },
-    onChange: function() {
-    }
-  });
+  dateFields.forEach(it => {
+    const datepicker = new Datepicker(it, {
+      onRender: () => {
+        setHandler();
+      },
+      onChange: function() {
+      },
+      i18n: {
+        months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        weekdays: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+      }
+    });
+  })
+
+
 
 }

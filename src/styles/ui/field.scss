@@ -28,7 +28,7 @@
 
     transition: border-bottom-color $transition;
 
-    outline: none;
+    outline: none !important;
 
     @include hover {
       border-bottom-color: $white;
