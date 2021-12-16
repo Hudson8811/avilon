@@ -7,8 +7,10 @@ body {
   font-weight: $fw-main;
   color: $textMainColor;
 
-	&.opened{
-		overflow: hidden;
+	@include max(lg) {
+		&.opened{
+			overflow: hidden;
+		}
 	}
 }
 
