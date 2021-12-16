@@ -199,7 +199,7 @@ window.addEventListener('load', () => {
             ajaxAllow = false;
             let parent = $(this).parent();
             parent.addClass('vacancies__menu-item--current').siblings().removeClass('vacancies__menu-item--current');
-            $('.vacancy-detail').removeClass('opened');
+            $('.vacancy-detail, body').removeClass('opened');
             let cat = parseInt($(this).data('catid'));
             getVacancies(cat);
         }
@@ -208,7 +208,7 @@ window.addEventListener('load', () => {
     $(document).on('change','.js-select-vacancy',function (){
         if (ajaxAllow){
             ajaxAllow = false;
-            $('.vacancy-detail').removeClass('opened');
+            $('.vacancy-detail, body').removeClass('opened');
             let cat = parseInt($(this).val());
             getVacancies(cat);
         }
@@ -249,7 +249,7 @@ window.addEventListener('load', () => {
 
     $(document).on('click touch','.vacancy-detail__close', function (){
         event.preventDefault();
-        $('.vacancy-detail').removeClass('opened');
+        $('.vacancy-detail, body').removeClass('opened');
     });
 
     $(document).on('click touch','.js-response', function (){
@@ -274,7 +274,7 @@ window.addEventListener('load', () => {
                 $('.vacancy-detail__conditions').html(data.conditions);
                 $('.response-vacancy [name="id"]').val(id);
                 $('.response-vacancy__vacancy-name').text(data.name);
-                $('.vacancy-detail').addClass('opened');
+                $('.vacancy-detail, body').addClass('opened');
                 setTimeout(function (){
                     ajaxAllow = true;
                 },300);
