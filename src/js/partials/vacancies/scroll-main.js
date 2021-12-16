@@ -223,10 +223,10 @@ window.addEventListener('load', () => {
                 $('.vacancies__list').html(data).hide().fadeIn(300);
                 setTimeout(function (){
                     ajaxAllow = true;
+                    AOS.refresh();
                     refreshVars();
                     checkMainScrollNeed();
                     checkAsideScrollNeed();
-                    AOS.refresh();
                 },300);
             },
             error : function (){
