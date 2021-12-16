@@ -1,5 +1,7 @@
 window.addEventListener('load', () => {
   AOS.init({
-    offset: 300
+    disable: 'mobile',
+    offset: 300,
+    duration: 800
   });
 });

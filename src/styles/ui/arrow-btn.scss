@@ -38,6 +38,11 @@
 
     transition: background-color $transition;
 
+    @include max(md) {
+      width: 36px;
+      height: 36px;
+    }
+
     svg {
       height: 15px;
       fill: $white;

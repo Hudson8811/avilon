@@ -61,6 +61,10 @@
     transition: transform $transition;
   }
 
+  .datepicker {
+    display: block;
+  }
+
   input:focus + &__hint,
   textarea:focus + &__hint {
     display: none;

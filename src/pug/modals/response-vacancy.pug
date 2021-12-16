@@ -13,21 +13,20 @@ section.response-vacancy#responseVacancy(style="display: none;")
         +field({type: 'text', name: 'firstname', hint: 'Имя', className: 'cform__field cform__field--half'})
         +field({type: 'text', name: 'lastname', hint: 'Фамилия', className: 'cform__field cform__field--half'})
         +field({type: 'text', name: 'patronymic', hint: 'Отчество', className: 'cform__field cform__field--half'})
-        +field({type: 'text', name: 'dateOfBirth', hint: 'Дата рождения', className: 'cform__field cform__field--half'})
+        +field({type: 'text', name: 'dateOfBirth', hint: 'Дата рождения', className: 'cform__field cform__field--half __js_date-field'})
         +field({type: 'email', name: 'email', hint: 'Email', className: 'cform__field cform__field--half'})
         +field({type: 'tel', name: 'phone', hint: 'Номер телефона', className: 'cform__field cform__field--half __js_imask'})
 
-      //- file upload
-      label.cform__file.file-upload
-        input.visually-hidden(type="file", name="cvFile")
-        span.file-upload__text Прикрепить резюме
-        span.file-upload__icon 
-          +icon('attach-file')(width="40", height="40")
+        //- file upload
+        label.cform__file.file-upload
+          input.visually-hidden(type="file", name="cvFile")
+          span.file-upload__text Прикрепить резюме
+          span.file-upload__icon 
+            +icon('attach-file')(width="40", height="40")
 
-      +field({type: 'textarea', name: 'message', hint: 'Расскажите, почему хотите работать у нас', className: 'cform__field'})
+        +field({type: 'textarea', name: 'message', hint: 'Расскажите, почему хотите работать у нас', className: 'cform__field'})
 
-      +custom-checkbox({name: 'consent', text: 'Даю cогласие на обработку персональных данных, а так же, на включение моей анкеты в базу кандидатов', className: 'cform__consent'})
-
+        +custom-checkbox({name: 'consent', text: 'Даю cогласие на обработку персональных данных, а так же, на включение моей анкеты в базу кандидатов', className: 'cform__consent'})
       +button-with-arrow({tag: 'button', typeOrHref: 'submit', text: 'Отправить заявку', className: 'cform__send button-with-arrow--outline-light'})
 
 

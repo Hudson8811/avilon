@@ -80,16 +80,17 @@ window.addEventListener('load', () => {
   };
 
   
-  let  lineGap, endPointScroll = null;
+  let lineGap, endPointScroll = null;
 
   const refreshVars = () => {
-    asideScrollElementHeight = asideScrollElement.offsetHeight;// изменится при ресайзе
-    asideScrolledElementHeight = asideScrolledElement.offsetHeight;// изменится при ресайзе
+    console.log(asideScrollElement)
+    asideScrollElementHeight = asideScrollElement ? asideScrollElement.offsetHeight : 0;// изменится при ресайзе
+    asideScrolledElementHeight = asideScrolledElement ? asideScrolledElement.offsetHeight : 0;// изменится при ресайзе
     asideScrollSize = 100;;//Math.floor(asideScrolledElementHeight / menuItems.length);//заменить линну масива
 
     asideEndPointScroll = Math.floor(asideScrolledElementHeight) - Math.floor(asideScrollElementHeight);
 
-    endPointScroll = Math.floor(scrolledElement.offsetHeight) - Math.floor(scrollElement.offsetHeight);
+    endPointScroll = scrolledElement && scrollElement ? Math.floor(scrolledElement.offsetHeight) - Math.floor(scrollElement.offsetHeight) : 0;
     lineGap = vacanciesList.firstElementChild ? vacanciesList.firstElementChild.offsetHeight : 0;
   };
 
@@ -117,39 +118,55 @@ window.addEventListener('load', () => {
   // Показ модального окна с формой отклика на вакансию
   const showModalWithResposeForm = function(evt) {
     evt.preventDefault();
-    Fancybox.show([{ src: "#responseVacancy", type: "inline", closeButton: false }]);
-    
+    Fancybox.show([{ src: "#responseVacancy", type: "inline", closeButton: false}]);
 
     const closeBtn = document.querySelector('.response-vacancy__close');
     closeBtn.onclick = () => {
-      Fancybox.close();
-      closeBtn.blur();
+      //Fancybox.close();
+      //closeBtn.blur();
     }
   };
   
   vacancyDetailBtn.onclick = showModalWithResposeForm;
 
+  let isInitSimplebars = false;
 
-    if (html.clientWidth >= 1080) {
-        vacanciesMainSimplebar = new SimpleBar(vacanciesMainSimplebarElement);
+  const initSimplebars = () => {
+    vacanciesMainSimplebar = new SimpleBar(vacanciesMainSimplebarElement);
 
-        scrollElement = vacanciesMainSimplebar.getScrollElement();
-        scrolledElement = scrollElement.firstElementChild;
+    scrollElement = vacanciesMainSimplebar.getScrollElement();
+    scrolledElement = scrollElement.firstElementChild;
 
-        vacanciesAsideSimplebar = new SimpleBar(vacanciesAsideSimplebarElement);
+    vacanciesAsideSimplebar = new SimpleBar(vacanciesAsideSimplebarElement);
 
-        asideScrollElement = vacanciesAsideSimplebar.getScrollElement();
-        asideScrolledElement = asideScrollElement.firstElementChild;
+    asideScrollElement = vacanciesAsideSimplebar.getScrollElement();
+    asideScrolledElement = asideScrollElement.firstElementChild;
 
-        vacanciesMainSimplebar.getScrollElement().addEventListener('scroll', checkMainScrollNeed);
-        vacanciesAsideSimplebar.getScrollElement().addEventListener('scroll', checkAsideScrollNeed);
-    }
+    vacanciesMainSimplebar.getScrollElement().onscroll = checkMainScrollNeed;
+    vacanciesAsideSimplebar.getScrollElement().onscroll = checkAsideScrollNeed;
 
+    isInitSimplebars = true;
+  };
 
-
+  if (html.clientWidth >= 1080) {
+    initSimplebars();
     refreshVars();
     checkMainScrollNeed();
     checkAsideScrollNeed();
+  }
+
+  window.addEventListener('resize', () => {
+
+    if (html.clientWidth >= 1080 && !isInitSimplebars) {
+      initSimplebars();
+    }
+
+    if (html.clientWidth >= 1080 && isInitSimplebars) {
+      refreshVars();
+      checkMainScrollNeed();
+      checkAsideScrollNeed();
+    }
+  });
 
 
   scrollAsideBtnUp.onclick = () => {

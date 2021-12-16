@@ -39,6 +39,14 @@
         margin-left: 0;
       }
     }
+
+    #{$self}__consent {
+      margin-left: 42px;
+
+      @include max(sm) {
+        margin-left: 0;
+      }
+    }
   }
 
   &__field {

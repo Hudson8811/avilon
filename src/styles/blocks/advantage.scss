@@ -34,5 +34,11 @@
     @include max(sm) {
       font-size: 14px;
     }
+
+    .mobile-hidden {
+      @include max(373) {
+        display: none;
+      }
+    }
   }
 }

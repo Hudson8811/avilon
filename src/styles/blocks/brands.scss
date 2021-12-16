@@ -33,6 +33,10 @@
       background-size: cover;
       background-image: url("../images/brands-bg.jpg");
 
+      @include retina {
+        background-image: url("../images/brands-bg@2x.jpg");
+      }
+
       @include max(lg) {
         width: calc(100% / 3);
       }
