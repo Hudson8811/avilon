@@ -1,13 +1,18 @@
 html {
   font-size: $fs-main;
   line-height: $lh-main;
+	@include max(md) {
+		&.opened{
+			overflow: hidden;
+		}
+	}
 }
 body {
   font-family: $mainFont;
   font-weight: $fw-main;
   color: $textMainColor;
 
-	@include max(lg) {
+	@include max(md) {
 		&.opened{
 			overflow: hidden;
 		}

@@ -32,6 +32,8 @@
     cursor: pointer;
     outline: none !important;
 
+	  display: block;
+
     svg {
       fill: $dark-4d;
       transition: fill $transition;
