@@ -7,6 +7,11 @@
     transparent 75.21%
   );
 
+	@include max(1746) {
+		background-image: none;
+		background-color: $light-e1;
+	}
+
   @include max(lg) {
     background-image: none;
     background-color: $light-e1;

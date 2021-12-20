@@ -1,6 +1,10 @@
 .advantages {
   padding: 280px 0 130px;
 
+  @include max(1440) {
+    padding-top: 440px;
+  }
+
   @include max(md) {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -33,7 +37,7 @@
     //background-image: url("../images/advantages-bg.jpg");
 
     @include max(1440) {
-      padding-bottom: 240px;
+      padding-bottom: 60px;
     }
 
     @include max(md) {
@@ -97,7 +101,7 @@
 
     @include max(1440) {
       width: 100%;
-      margin-top: -200px;
+      margin-top: -360px;
       padding: 0 24px 60px;
     }
 
@@ -179,7 +183,7 @@
       bottom: 0;
       width: 100%;
       max-width: 885px;
-      margin: 550px auto 0;
+      margin: 270px auto 0;
       transform: translateY(0);
     }
 
@@ -228,4 +232,7 @@
       margin-top: 1.6em;
     }
   }
+}
+[data-aos="fade-in"].aos-animate {
+  transform: none !important;
 }

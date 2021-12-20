@@ -35,6 +35,8 @@
     background-color: transparent;
     appearance: none;
     cursor: pointer;
+	  display: block;
+	  padding: 0;
 
     @include max(xs) {
       top: 20px;

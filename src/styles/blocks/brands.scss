@@ -18,6 +18,9 @@
     position: relative;
     background-color: $asphalt-c9;
 
+	  max-width: 1920px;
+	  margin: 0 auto;
+
     &::before {
       content: "";
       position: absolute;
@@ -117,6 +120,9 @@
   &__businesses {
     display: flex;
     flex-wrap: wrap;
+
+	  max-width: 1920px;
+	  margin: 0 auto;
 
     &-item {
       width: 25%;

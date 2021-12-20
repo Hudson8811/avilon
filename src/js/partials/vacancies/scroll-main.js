@@ -118,7 +118,7 @@ window.addEventListener('load', () => {
   // Показ модального окна с формой отклика на вакансию
   const showModalWithResposeForm = function(evt) {
     evt.preventDefault();
-    Fancybox.show([{ src: "#responseVacancy", type: "html", closeButton: false, autoFocus: false, trapFocus: false}]);
+    Fancybox.show([{ src: "#responseVacancy", type: "inline", closeButton: false, autoFocus: false, trapFocus: false}]);
 
     const closeBtn = document.querySelector('.response-vacancy__close');
     closeBtn.blur();
@@ -187,7 +187,10 @@ window.addEventListener('load', () => {
   };
 
 
-    var choices = new Choices('.__js_choice');
+    var choices = new Choices('.__js_choice',{
+        searchEnabled : false,
+        searchChoices: false
+    });
 
     var ajaxAllow = true;
     $(document).on('click touch','.vacancies__menu-item a', function (){
@@ -196,7 +199,7 @@ window.addEventListener('load', () => {
             ajaxAllow = false;
             let parent = $(this).parent();
             parent.addClass('vacancies__menu-item--current').siblings().removeClass('vacancies__menu-item--current');
-            $('.vacancy-detail').removeClass('opened');
+            $('.vacancy-detail, body, html').removeClass('opened');
             let cat = parseInt($(this).data('catid'));
             getVacancies(cat);
         }
@@ -205,7 +208,7 @@ window.addEventListener('load', () => {
     $(document).on('change','.js-select-vacancy',function (){
         if (ajaxAllow){
             ajaxAllow = false;
-            $('.vacancy-detail').removeClass('opened');
+            $('.vacancy-detail, body, html').removeClass('opened');
             let cat = parseInt($(this).val());
             getVacancies(cat);
         }
@@ -223,6 +226,7 @@ window.addEventListener('load', () => {
                 $('.vacancies__list').html(data).hide().fadeIn(300);
                 setTimeout(function (){
                     ajaxAllow = true;
+                    AOS.refresh();
                     refreshVars();
                     checkMainScrollNeed();
                     checkAsideScrollNeed();
@@ -245,12 +249,12 @@ window.addEventListener('load', () => {
 
     $(document).on('click touch','.vacancy-detail__close', function (){
         event.preventDefault();
-        $('.vacancy-detail').removeClass('opened');
+        $('.vacancy-detail, body, html').removeClass('opened');
     });
 
     $(document).on('click touch','.js-response', function (){
         event.preventDefault();
-        showResposeModal();
+        //showResposeModal();
     });
 
     function getVacancy(id){
@@ -270,7 +274,7 @@ window.addEventListener('load', () => {
                 $('.vacancy-detail__conditions').html(data.conditions);
                 $('.response-vacancy [name="id"]').val(id);
                 $('.response-vacancy__vacancy-name').text(data.name);
-                $('.vacancy-detail').addClass('opened');
+                $('.vacancy-detail, body, html').addClass('opened');
                 setTimeout(function (){
                     ajaxAllow = true;
                 },300);
@@ -285,7 +289,8 @@ window.addEventListener('load', () => {
         $('.response-vacancy').show();
     }
     function hideResposeModal(){
-        $('.response-vacancy').hide();
+        //$('.response-vacancy').hide();
+        Fancybox.close();
     }
 
     $(document).on('submit', '.response-form',function (){
