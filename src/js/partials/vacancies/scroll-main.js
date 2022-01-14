@@ -120,7 +120,7 @@ window.addEventListener('load', () => {
     evt.preventDefault();
     Fancybox.show([{ src: "#responseVacancy", type: "inline", closeButton: false, autoFocus: false, trapFocus: false}]);
 
-    const closeBtn = document.querySelector('.response-vacancy__close');
+    const closeBtn = document.querySelector('#responseVacancy .response-vacancy__close');
     closeBtn.blur();
 
     closeBtn.onclick = () => {
@@ -189,7 +189,7 @@ window.addEventListener('load', () => {
 
     var choices = new Choices('.__js_choice',{
         searchEnabled : false,
-        searchChoices: false
+        searchChoices: false,
     });
 
     var ajaxAllow = true;
@@ -223,6 +223,11 @@ window.addEventListener('load', () => {
                 $('.vacancies__list').fadeOut(100);
             },
             success : function( data ){
+                if (data){
+                    $('.vacancies__main').removeClass('no-items');
+                } else {
+                    $('.vacancies__main').addClass('no-items');
+                }
                 $('.vacancies__list').html(data).hide().fadeIn(300);
                 setTimeout(function (){
                     ajaxAllow = true;
@@ -310,8 +315,8 @@ window.addEventListener('load', () => {
                     form.find('.cform__send .button-with-arrow__text').text('Отправка...');
                 },
                 success : function( data ){
-                    alert('Заявка отправлена');
                     hideResposeModal();
+                    Fancybox.show([{ src: "#successSend", type: "inline", closeButton: false, autoFocus: false, trapFocus: false}]);
                     form.trigger("reset");
                     form.find('.cform__send .button-with-arrow__text').text('Отправить заявку');
                     ajaxAllow = true;

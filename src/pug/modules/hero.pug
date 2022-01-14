@@ -1,14 +1,19 @@
 section.hero
-  .hero__container.container 
-    .hero__column.hero__column--main(data-aos="fade-right")
-      h1.hero__title.title Приглашаем на работу в&nbsp;Авилон!
-      ul.hero__list
-        each item in HERO_LIST
-          li= item
-    .hero__column.hero__column--aside
-      //-.hero__image 
-        img(src="images/hero-image.jpg", width="1434", height="900", alt="")
-      .hero__video(data-aos="fade-left")
-        video(autoplay="true", mute="true", loop="true")
-          source(src="video/_vars-video-main__video.mp4" type="video/mp4")
-      .hero__text(data-aos="fade-up") ГК «АВИЛОН» — один из лидирующих многопрофильных холдингов России, что подтверждает большое количество наград, которыми удостоен ГК «АВИЛОН».
+	.hero__container.container
+		.hero__column.hero__column--main(data-aos="fade-right")
+			h1.hero__title.title Приглашаем на работу в&nbsp;Авилон!
+			.hero__block
+				.hero__block-text
+					p Мы профессионалы, влюблённые в&nbsp;своё дело.
+					p Стань частью команды Авилон!
+				a.hero__block-btn(href="#vacancies") Посмотреть вакансии
+			//- ul.hero__list
+				each item in HERO_LIST
+				li= item
+		.hero__column.hero__column--aside
+			//-.hero__image
+				img(src="images/hero-image.jpg", width="1434", height="900", alt="")
+			.hero__video(data-aos="fade-left")
+				video(autoplay="true", mute="true", loop="true")
+					source(src="video/_vars-video-main__video.mp4" type="video/mp4")
+			.hero__text(data-aos="fade-up") ГК «АВИЛОН» — один из лидирующих многопрофильных холдингов России, что подтверждает большое количество наград, которыми удостоен ГК «АВИЛОН».

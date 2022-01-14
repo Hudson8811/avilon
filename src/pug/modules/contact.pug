@@ -3,7 +3,9 @@ section.contact
     .contact__note(data-aos="fade-up") Не нашли подходящую вакансию? <br>Свяжитесь с нами!
   .contact__wrapper(data-aos="fade-up")
     .container 
-      // ::before
+
+      .contact__map
+        | <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1SJZaQYu6bDHAJjLFKUACJ55il_-t8nCS&ehbc=2E312F" width="640" height="480"></iframe>
       .contact__form.cform
         form(action="#", method="post")
           +field({type: 'text', name: 'firstname', hint: 'ФИО', className: 'cform__field field--text-center'})

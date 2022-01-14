@@ -80,4 +80,11 @@
     margin-top: 8px;
     font-weight: 600;
   }
+
+  &--mini{
+    width: auto;
+    .response-vacancy__header{
+      margin-bottom: 0;
+    }
+  }
 }

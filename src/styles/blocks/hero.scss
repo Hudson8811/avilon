@@ -27,7 +27,8 @@
 
   &__title {
     margin: 0 0 77px;
-    font-size: 70px;
+    font-size: 50px;
+	line-height: 55px;
 
     @include max(lg) {
       margin-bottom: 50px;
@@ -41,6 +42,31 @@
       font-size: 48px;
     }
   }
+
+	&__block{
+		&-text{
+			font-family: $secondFont;
+			font-size: 25px;
+		}
+		&-btn{
+			display: block;
+			text-align: center;
+			line-height: 70px;
+			width: 275px;
+			height: 70px;
+			outline: 1px solid #c9d2d7;
+			color: #93a8b3;
+			letter-spacing: 2px;
+			text-decoration: none;
+			background-color: transparent;
+			margin-top: 80px;
+			&:hover{
+				outline: none;
+				background: #93a8b3;
+				color: #fff;
+			}
+		}
+	}
 
   &__list {
     @include max(lg) {
@@ -107,8 +133,10 @@
 
   &__video {
     width: calc(100% + 75px);
+	  height: calc(100vh - 100px);
 
     @include max(lg) {
+	    height: auto;
       width: calc(100% + 30px);
       margin-left: -15px;
       //background-color: $light-e1;
@@ -119,14 +147,19 @@
       display: block;
       width: 100%;
       max-width: none;
-      height: auto;
+	    height: 100%;
+	    object-fit: cover;
+	    @include max(lg) {
+		    object-fit: initial;
+		    height: auto;
+	    }
     }
   }
 
   &__column {
     &--main {
       width: 410px;
-      padding-top: 134px;
+      padding-top: 70px;
       padding-right: 45px;
       flex-shrink: 0;
 

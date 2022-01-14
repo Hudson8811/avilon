@@ -1,25 +1,23 @@
 section.advantages
   .advantages__main
-    .advantages__main-image
-      img(src="images/n_advantages-bg.jpg", alt="")
     .container
-      .advantages__wrapper
-        h2.advantages__title.title Преимущества
+      .advantages__flex
+        .advantages__wrapper
+          h2.advantages__title.title Преимущества
+          ul.advantages__list
+            each item in ADVANTAGES_LIST
+              li.advantages__item.advantage
+                .advantage__icon
+                  +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+                .advantage__text!= item.text
 
-        ul.advantages__list
-          each item in ADVANTAGES_LIST
-            li.advantages__item.advantage
-              .advantage__icon
-                +icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
-              .advantage__text!= item.text
-      
-      .advantages__video.video
-        .video__inner
-          .video__placeholder
-            button.video__play(type="button")
-              +icon('play')(width="120", height="120")
-          video(preload)
-            source(src="video/avilon-job.mp4", type="video/mp4")
+        .advantages__video.video
+          .video__inner
+            .video__placeholder
+              button.video__play(type="button")
+                +icon('play')(width="120", height="120")
+            video(preload)
+              source(src="video/avilon-job.mp4", type="video/mp4")
   .advantages__bottom(data-aos="fade-up")
     .container
       

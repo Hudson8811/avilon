@@ -4,7 +4,7 @@
 
   &__icon {
     height: 98px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     align-self: center;
 
     @include max(1440) {
@@ -23,8 +23,8 @@
   }
 
   &__text {
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 24px;
     text-align: center;
 
     @include max(1440) {

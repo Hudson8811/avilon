@@ -1,19 +1,12 @@
 .advantages {
-  padding: 280px 0 130px;
+  padding: 60px 0 60px;
 
-  @include max(1440) {
-    padding-top: 440px;
-  }
-
-  @include max(md) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
 
   &__title {
     //width: 50%;
     margin-bottom: 60px;
-    padding: 70px 0;
+    padding: 20px 0;
+    text-align: center;
     //background-color: $light-f1;
 
     @include max(1440) {
@@ -31,14 +24,7 @@
 
   &__main {
     position: relative;
-    padding-bottom: 140px; //327px;;
-    //background-repeat: no-repeat;
-    //background-size: cover;
-    //background-image: url("../images/advantages-bg.jpg");
 
-    @include max(1440) {
-      padding-bottom: 60px;
-    }
 
     @include max(md) {
       padding-bottom: 0;
@@ -48,37 +34,6 @@
       //padding-bottom: 200px;
     }
 
-    &-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(35, 42, 50, 0.39);
-      }
-
-      @include max(md) {
-        position: relative;
-        height: auto;
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
 
     .container {
       position: relative;
@@ -87,26 +42,30 @@
     }
   }
 
+  &__flex{
+    display: flex;
+    flex-direction: row-reverse;
+    @include max(1440) {
+      flex-direction: column;
+    }
+  }
+
   &__wrapper {
     width: 50%;
-    margin-top: -220px;
-    padding: 14px 133px 210px;
+    padding: 14px 20px 20px;
     background-color: $light-f1;
     align-self: flex-start;
 
     @include max(xxl) {
-      margin-top: vw(-220);
-      padding: vw(14) vw(133) vw(210);
+      padding: vw(14) vw(20) vw(20);
     }
 
     @include max(1440) {
       width: 100%;
-      margin-top: -360px;
       padding: 0 24px 60px;
     }
 
     @include max(md) {
-      margin-top: 0;
       padding: 0 60px 80px;
     }
 
@@ -141,9 +100,9 @@
   }
 
   &__item {
-    width: 100%;
-    max-width: 248px;
-    margin-top: 87px;
+    max-width: 50%;
+    margin-top: 70px;
+    flex-basis: 248px;
 
     @include max(1440) {
       width: calc(100% / 6);
@@ -151,18 +110,21 @@
       margin-top: 60px;
       padding: 0 20px;
       flex-grow: 1;
+      flex-basis: calc(100% / 6);
     }
 
     @include max(md) {
       width: calc(100% / 3);
       max-width: 248px;
       margin-top: 60px;
+      flex-basis: calc(100% / 3);
     }
 
     @include max(xs) {
       width: 50%;
       max-width: 220px;
       margin-top: 40px;
+      flex-basis: 50%;
     }
   }
 
@@ -170,25 +132,20 @@
   }
 
   &__video {
-    position: absolute;
-    right: 15px;
-    bottom: -123px;
-    width: calc(50% - 15px);
-    align-self: flex-start;
-    transform: translateY(50%);
 
     @include max(1440) {
-      position: relative;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      max-width: 885px;
-      margin: 270px auto 0;
-      transform: translateY(0);
+
     }
 
     @include max(md) {
-      margin-top: 0;
+    }
+
+    .video__inner{
+      padding: 0;
+      height: 100%;
+    }
+    video{
+      position: static;
     }
   }
 
@@ -205,7 +162,6 @@
 
     @include max(1440) {
       max-width: 850px;
-      margin-top: -140px;
       padding: 56px 48px 0;
       background-color: $white;
     }

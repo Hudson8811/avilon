@@ -1,92 +1,93 @@
 section.vacancies
-  header.vacancies__header
-    .container
-      .vacancies__header-content
-        h2.vacancies__title.title(data-aos="fade-up") Вакансии
-        .vacancies__short(data-aos="fade-up") Выбирайте из более чем 300 открытых вакансий по 40 различным направлениям. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-      span.bg(data-aos="fade-left")
-    
-  .vacancies__wrapper(data-aos="fade-in")
-    .container
-      .vacancies__aside
-        +scroll-btn('up', 'vacancies__aside-scroll-btn vacancies__aside-scroll-btn--up')
+	header.vacancies__header
+		.container
+			.vacancies__header-content
+				h2.vacancies__title.title(data-aos="fade-up") Вакансии
+				.vacancies__short(data-aos="fade-up") Выберите вакансию в интересующему вас направлении.
+			span.bg(data-aos="fade-left")
 
-        .vacancies__aside-scroll-wrapper.__js_vacancies-aside-simplebar
-          ul.vacancies__menu
-            each item, index in VACANCIES_MENU
-              li.vacancies__menu-item(class= (index === 0 ? ' vacancies__menu-item--current' : ''))
-                a(href="#", data-target= item.target)= item.text + (item.counter ? ` (${item.counter})` : '')
+	.vacancies__wrapper#vacancies(data-aos="fade-in")
+		.container
+			.vacancies__aside
+				+scroll-btn('up', 'vacancies__aside-scroll-btn vacancies__aside-scroll-btn--up')
 
-        +scroll-btn('down', 'vacancies__aside-scroll-btn vacancies__aside-scroll-btn--down')
+				.vacancies__aside-scroll-wrapper.__js_vacancies-aside-simplebar
+					ul.vacancies__menu
+						each item, index in VACANCIES_MENU
+							li.vacancies__menu-item(class= (index === 0 ? ' vacancies__menu-item--current' : ''))
+								a(href="#", data-target= item.target)= item.text + (item.counter ? ` (${item.counter})` : '')
 
-        .vacancies__aside-select 
-          select.__js_choice(name="vacancies")
-            each item in VACANCIES_MENU
-              option(value= item.target)= item.text + (item.counter ? ` (${item.counter})` : '')
-       
+				+scroll-btn('down', 'vacancies__aside-scroll-btn vacancies__aside-scroll-btn--down')
+
+				.vacancies__aside-select
+					select.__js_choice(name="vacancies")
+						option(value="") Выбрать вакансию
+						each item in VACANCIES_MENU
+							option(value= item.target)= item.text + (item.counter ? ` (${item.counter})` : '')
 
 
-      .vacancies__main
-        +scroll-btn('up', 'vacancies__main-scroll-btn vacancies__main-scroll-btn--up')
 
-        .vacancies__main-scroll-wrapper.__js_vacancies-main-simplebar
-          ul.vacancies__list
-            each item in VACANCIES_LIST
-              +vacancy-preview(item)
-        
-        +scroll-btn('down', 'vacancies__main-scroll-btn vacancies__main-scroll-btn--down')
+			.vacancies__main
+				+scroll-btn('up', 'vacancies__main-scroll-btn vacancies__main-scroll-btn--up')
 
-        section.vacancies__detail.vacancy-detail
-          header.vacancy-detail__header
-            h2.vacancy-detail__title Старший менеджер отдела продаж VOLVO
-            button.vacancy-detail__close(type="button")
-              +icon('close')(width="33", height="33")
-          .vacancy-detail__main.__js_vacancy-detail-mainsimplebar
-            .vacancy-detail__main-inner
-              .vacancy-detail__column
-                .vacancy-detail__item
-                  .vacancy-detail__item-hint Зарплата
-                  .vacancy-detail__item-text 
-                    b 150 000 – 250 000 руб
-                
-                .vacancy-detail__item 
-                  .vacancy-detail__item-hint Город
-                  .vacancy-detail__item-text Москва
-                
-                .vacancy-detail__item 
-                  .vacancy-detail__item-hint Место работы
-                  .vacancy-detail__item-text Россия, Москва, Нижегородская ул., д. 70, корп. 2, эт. 1, пом. 2, оф 1
-                
-                .vacancy-detail__item 
-                  .vacancy-detail__item-hint Обязанности
-                  .vacancy-detail__item-text
-                    p Консультирование клиентов в автосалоне, демонстрация автомобилей, проведение тест-драйвов
-                    
-                    p Контроль процесса оформления проданных автомобилей, постановки на учет, подготовки к выдаче, установки дополнительного оборудования и своевременная выдача автомобилей клиентам
+				.vacancies__main-scroll-wrapper.__js_vacancies-main-simplebar
+					ul.vacancies__list
+						each item in VACANCIES_LIST
+							+vacancy-preview(item)
 
-              .vacancy-detail__column
-                
-                .vacancy-detail__item 
-                  .vacancy-detail__item-hint Требования
-                  .vacancy-detail__item-text 
-                    p Высшее образование
-                    p Опыт работы в продажах автомобилей
-                    p Личные качества: коммуникабельность, высокая рабочая мотивация, обучаемость
-                
-                
-                .vacancy-detail__item 
-                  .vacancy-detail__item-hint Условия
-                  .vacancy-detail__item-text 
-                    p Официальное трудоустройство в штат компании в соответствии с ТК РФ
-                    p Обучение со стороны компании и импортера
-                    p График работы: сменный
-                    p Оплачиваемы отпуска и больничные листы
-                    p Отличные возможности профессионального и карьерного роста
-                    p Скидки на покупку автомобилей брендов компании и сервисное обслуживание
+				+scroll-btn('down', 'vacancies__main-scroll-btn vacancies__main-scroll-btn--down')
 
-          footer.vacancy-detail__footer 
-            +button-with-arrow({tag: 'button', typeOrHref: 'button', text: 'Откликнуться', className: 'vacancy-detail__btn'})
-            //-button.vacancy-detail__btn(type="button")
-              span.vacancy-detail__btn-text Откликнуться
-              span.vacancy-detail__btn-icon 
-                +icon('long-arrow-right')(width="30", height="16")
+				section.vacancies__detail.vacancy-detail
+					header.vacancy-detail__header
+						h2.vacancy-detail__title Старший менеджер отдела продаж VOLVO
+						button.vacancy-detail__close(type="button")
+							+icon('close')(width="33", height="33")
+					.vacancy-detail__main.__js_vacancy-detail-mainsimplebar
+						.vacancy-detail__main-inner
+							.vacancy-detail__column
+								.vacancy-detail__item
+									.vacancy-detail__item-hint Зарплата
+									.vacancy-detail__item-text
+										b 150 000 – 250 000 руб
+
+								.vacancy-detail__item
+									.vacancy-detail__item-hint Город
+									.vacancy-detail__item-text Москва
+
+								.vacancy-detail__item
+									.vacancy-detail__item-hint Место работы
+									.vacancy-detail__item-text Россия, Москва, Нижегородская ул., д. 70, корп. 2, эт. 1, пом. 2, оф 1
+
+								.vacancy-detail__item
+									.vacancy-detail__item-hint Обязанности
+									.vacancy-detail__item-text
+										p Консультирование клиентов в автосалоне, демонстрация автомобилей, проведение тест-драйвов
+
+										p Контроль процесса оформления проданных автомобилей, постановки на учет, подготовки к выдаче, установки дополнительного оборудования и своевременная выдача автомобилей клиентам
+
+							.vacancy-detail__column
+
+								.vacancy-detail__item
+									.vacancy-detail__item-hint Требования
+									.vacancy-detail__item-text
+										p Высшее образование
+										p Опыт работы в продажах автомобилей
+										p Личные качества: коммуникабельность, высокая рабочая мотивация, обучаемость
+
+
+								.vacancy-detail__item
+									.vacancy-detail__item-hint Условия
+									.vacancy-detail__item-text
+										p Официальное трудоустройство в штат компании в соответствии с ТК РФ
+										p Обучение со стороны компании и импортера
+										p График работы: сменный
+										p Оплачиваемы отпуска и больничные листы
+										p Отличные возможности профессионального и карьерного роста
+										p Скидки на покупку автомобилей брендов компании и сервисное обслуживание
+
+					footer.vacancy-detail__footer
+						+button-with-arrow({tag: 'button', typeOrHref: 'button', text: 'Откликнуться', className: 'vacancy-detail__btn'})
+						//-button.vacancy-detail__btn(type="button")
+							span.vacancy-detail__btn-text Откликнуться
+							span.vacancy-detail__btn-icon
+							+icon('long-arrow-right')(width="30", height="16")
