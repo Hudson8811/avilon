@@ -12,7 +12,7 @@
     background-color: $light-e4;
 
     @include max(1440) {
-      width: 60%;
+      font-size: 37px;
     }
 
     @include max(md) {
@@ -42,9 +42,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    @include max(1440) {
-      width: 40%;
-    }
+
     @include max(md) {
       display: none;
     }
@@ -62,14 +60,12 @@
     background-color: $dark-14;
 
     @include max(1440) {
-      width: 60%;
-      padding-left: 100px;
-      padding-right: 100px;
+      padding: 60px 90px 55px;
     }
 
     @include max(lg) {
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: 50px;
+      padding-right: 50px;
     }
 
     @include max(md) {

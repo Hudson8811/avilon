@@ -39,8 +39,8 @@
     transition: background-color $transition;
 
     @include max(md) {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
     }
 
     svg {
@@ -54,6 +54,14 @@
 
       svg {
         fill: $white;
+      }
+    }
+
+    &.swiper-button-disabled{
+      opacity: 0.85;
+      background-color: $dark-37;
+      svg {
+        fill: #656A6B;
       }
     }
   }

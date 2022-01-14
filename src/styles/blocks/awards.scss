@@ -163,6 +163,11 @@
       display: flex;
       justify-content: space-between;
 
+      @include max(639) {
+        top: 125px;
+        padding: 0 31px;
+      }
+
       & > * {
         transform: translateY(-50%);
       }
@@ -170,6 +175,10 @@
       .swiper-button-disabled {
         pointer-events: none;
         background-color: #ccc;
+        @include max(639) {
+          opacity: 0.85;
+          background-color: $dark-37;
+        }
       }
     }
   }
