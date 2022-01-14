@@ -21,7 +21,8 @@
 
     @include max(xs) {
       padding: 32px 24px;
-      font-size: 30px;
+      padding-right: 15px;
+      font-size: 25px;
     }
   }
 

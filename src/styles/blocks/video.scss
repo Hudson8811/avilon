@@ -39,6 +39,10 @@
 
     align-self: center;
 
+    @include max(md) {
+      width: 70px;
+    }
+
     @include hover {
       svg {
         fill: rgba($white, 0.9);
