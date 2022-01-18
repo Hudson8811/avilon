@@ -176,7 +176,6 @@
   }
 
   &__text {
-    max-width: 750px;
     //margin-left: auto;
     margin-right: 0;
     padding: 45px 0 0;
@@ -187,7 +186,6 @@
     //background-color: rgba(yellow, 0.4);
 
     @include max(1440) {
-      max-width: 850px;
       padding: 45px 48px 0;
       background-color: $white;
     }
