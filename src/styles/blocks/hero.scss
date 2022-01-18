@@ -47,7 +47,12 @@
 		&-text{
 			font-family: $secondFont;
 			font-size: 25px;
-		}
+          @include max(lg) {
+            br{
+              display: none;
+            }
+          }
+        }
 		&-btn{
 			display: block;
 			text-align: center;

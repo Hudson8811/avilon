@@ -1,15 +1,15 @@
 .contact {
 
+  background-color: $light-e4;
 
   &__note {
-    width: 50%;
     margin-left: auto;
     padding: 46px 64px;
     font-family: $secondFont;
     font-size: 40px;
     line-height: 1.35;
     font-weight: 500;
-    background-color: $light-e4;
+    text-align: center;
 
     @include max(1440) {
       font-size: 37px;
