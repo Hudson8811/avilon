@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
   AOS.init({
-    offset: 300,
+    offset: 80,
     duration: 800
   });
 });
